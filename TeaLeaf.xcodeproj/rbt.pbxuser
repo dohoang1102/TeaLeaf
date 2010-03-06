@@ -433,7 +433,7 @@
 		vrLen = 576;
 		vrLoc = 0;
 	};
-	7D31D2FC10FA076700DAFC6F /* README.txt */ = {
+	7D31D2FC10FA076700DAFC6F /* MGTwitterREADME.txt */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {4541, 1612}}";
 			sepNavSelRange = "{0, 0}";
@@ -581,7 +581,7 @@
 	};
 	7DFECCF21142AFE300AA2151 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 7D31D2FC10FA076700DAFC6F /* README.txt */;
+		fRef = 7D31D2FC10FA076700DAFC6F /* MGTwitterREADME.txt */;
 		name = "README.txt: 1";
 		rLen = 0;
 		rLoc = 0;

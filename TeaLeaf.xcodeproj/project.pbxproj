@@ -104,7 +104,7 @@
 		7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tealeafdaemon.m; sourceTree = "<group>"; };
 		7D31D23210F9FD5B00DAFC6F /* DaemonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaemonController.h; sourceTree = "<group>"; };
 		7D31D23310F9FD5B00DAFC6F /* DaemonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaemonController.m; sourceTree = "<group>"; };
-		7D31D2FC10FA076700DAFC6F /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		7D31D2FC10FA076700DAFC6F /* MGTwitterREADME.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MGTwitterREADME.txt; sourceTree = "<group>"; };
 		7DFECCCA1142A83500AA2151 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
 		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		7DFECCD51142AA0500AA2151 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		7D31D1E310F9FBFA00DAFC6F /* MGTwitterEngine */ = {
 			isa = PBXGroup;
 			children = (
-				7D31D2FC10FA076700DAFC6F /* README.txt */,
+				7D31D2FC10FA076700DAFC6F /* MGTwitterREADME.txt */,
 				7DFECCCA1142A83500AA2151 /* Source Code License.rtf */,
 				7D31D20C10F9FBFB00DAFC6F /* MGTwitterEngineGlobalHeader.h */,
 				7D31D20D10F9FBFB00DAFC6F /* MGTwitterEngine.h */,
