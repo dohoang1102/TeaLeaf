@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		256AC3DA0F4B6AC300CF3369 /* TeaLeafAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* TeaLeafAppDelegate.m */; };
+		7D31D0FE10F9D70000DAFC6F /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
+		7D31D11E10F9DB7000DAFC6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */; };
+		7D31D12A10F9DC0F00DAFC6F /* ConfigurationFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */; };
+		7D31D21410F9FBFB00DAFC6F /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1E610F9FBFA00DAFC6F /* NSString+UUID.m */; };
+		7D31D21510F9FBFB00DAFC6F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1E810F9FBFA00DAFC6F /* NSData+Base64.m */; };
+		7D31D21C10F9FBFB00DAFC6F /* MGTwitterXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1F810F9FBFA00DAFC6F /* MGTwitterXMLParser.m */; };
+		7D31D21D10F9FBFB00DAFC6F /* MGTwitterStatusesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1FA10F9FBFA00DAFC6F /* MGTwitterStatusesParser.m */; };
+		7D31D21E10F9FBFB00DAFC6F /* MGTwitterUsersParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1FC10F9FBFA00DAFC6F /* MGTwitterUsersParser.m */; };
+		7D31D21F10F9FBFB00DAFC6F /* MGTwitterMessagesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1FE10F9FBFA00DAFC6F /* MGTwitterMessagesParser.m */; };
+		7D31D22010F9FBFB00DAFC6F /* MGTwitterMiscParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D20010F9FBFA00DAFC6F /* MGTwitterMiscParser.m */; };
+		7D31D22610F9FBFB00DAFC6F /* MGTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D20E10F9FBFB00DAFC6F /* MGTwitterEngine.m */; };
+		7D31D22710F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D21110F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.m */; };
+		7D31D23110F9FD1C00DAFC6F /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
+		7D31D23410F9FD5B00DAFC6F /* DaemonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23310F9FD5B00DAFC6F /* DaemonController.m */; };
+		7D31D23510F9FD7400DAFC6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
+		7D31D2C110FA049600DAFC6F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		7D31D2CC10FA04F700DAFC6F /* ConfigurationFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */; };
+		7D31D2CF10FA050200DAFC6F /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D31D1D810F9FB1100DAFC6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* TeaLeaf */;
+			remoteInfo = TeaLeaf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		256AC3D80F4B6AC300CF3369 /* TeaLeafAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeaLeafAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* TeaLeafAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeaLeafAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* TeaLeaf_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeaLeaf_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7D31D0FC10F9D70000DAFC6F /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		7D31D0FD10F9D70000DAFC6F /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
+		7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		7D31D12810F9DC0F00DAFC6F /* ConfigurationFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationFileManager.h; sourceTree = "<group>"; };
+		7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationFileManager.m; sourceTree = "<group>"; };
+		7D31D1D410F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = uk.co.swandrift.tealeaf; path = build/Debug/uk.co.swandrift.tealeaf; sourceTree = "<group>"; };
+		7D31D1E510F9FBFA00DAFC6F /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
+		7D31D1E610F9FBFA00DAFC6F /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
+		7D31D1E710F9FBFA00DAFC6F /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		7D31D1E810F9FBFA00DAFC6F /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		7D31D1EA10F9FBFA00DAFC6F /* MGTwitterYAJLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterYAJLParser.h; sourceTree = "<group>"; };
+		7D31D1EB10F9FBFA00DAFC6F /* MGTwitterYAJLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterYAJLParser.m; sourceTree = "<group>"; };
+		7D31D1EC10F9FBFA00DAFC6F /* MGTwitterStatusesYAJLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterStatusesYAJLParser.h; sourceTree = "<group>"; };
+		7D31D1ED10F9FBFA00DAFC6F /* MGTwitterStatusesYAJLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterStatusesYAJLParser.m; sourceTree = "<group>"; };
+		7D31D1EE10F9FBFA00DAFC6F /* MGTwitterUsersYAJLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterUsersYAJLParser.h; sourceTree = "<group>"; };
+		7D31D1EF10F9FBFA00DAFC6F /* MGTwitterUsersYAJLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterUsersYAJLParser.m; sourceTree = "<group>"; };
+		7D31D1F010F9FBFA00DAFC6F /* MGTwitterMessagesYAJLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMessagesYAJLParser.h; sourceTree = "<group>"; };
+		7D31D1F110F9FBFA00DAFC6F /* MGTwitterMessagesYAJLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMessagesYAJLParser.m; sourceTree = "<group>"; };
+		7D31D1F210F9FBFA00DAFC6F /* MGTwitterMiscYAJLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMiscYAJLParser.h; sourceTree = "<group>"; };
+		7D31D1F310F9FBFA00DAFC6F /* MGTwitterMiscYAJLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMiscYAJLParser.m; sourceTree = "<group>"; };
+		7D31D1F410F9FBFA00DAFC6F /* MGTwitterSearchYAJLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterSearchYAJLParser.h; sourceTree = "<group>"; };
+		7D31D1F510F9FBFA00DAFC6F /* MGTwitterSearchYAJLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterSearchYAJLParser.m; sourceTree = "<group>"; };
+		7D31D1F710F9FBFA00DAFC6F /* MGTwitterXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterXMLParser.h; sourceTree = "<group>"; };
+		7D31D1F810F9FBFA00DAFC6F /* MGTwitterXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterXMLParser.m; sourceTree = "<group>"; };
+		7D31D1F910F9FBFA00DAFC6F /* MGTwitterStatusesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterStatusesParser.h; sourceTree = "<group>"; };
+		7D31D1FA10F9FBFA00DAFC6F /* MGTwitterStatusesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterStatusesParser.m; sourceTree = "<group>"; };
+		7D31D1FB10F9FBFA00DAFC6F /* MGTwitterUsersParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterUsersParser.h; sourceTree = "<group>"; };
+		7D31D1FC10F9FBFA00DAFC6F /* MGTwitterUsersParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterUsersParser.m; sourceTree = "<group>"; };
+		7D31D1FD10F9FBFA00DAFC6F /* MGTwitterMessagesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMessagesParser.h; sourceTree = "<group>"; };
+		7D31D1FE10F9FBFA00DAFC6F /* MGTwitterMessagesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMessagesParser.m; sourceTree = "<group>"; };
+		7D31D1FF10F9FBFA00DAFC6F /* MGTwitterMiscParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMiscParser.h; sourceTree = "<group>"; };
+		7D31D20010F9FBFA00DAFC6F /* MGTwitterMiscParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMiscParser.m; sourceTree = "<group>"; };
+		7D31D20210F9FBFA00DAFC6F /* MGTwitterLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterLibXMLParser.h; sourceTree = "<group>"; };
+		7D31D20310F9FBFA00DAFC6F /* MGTwitterLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterLibXMLParser.m; sourceTree = "<group>"; };
+		7D31D20410F9FBFA00DAFC6F /* MGTwitterStatusesLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterStatusesLibXMLParser.h; sourceTree = "<group>"; };
+		7D31D20510F9FBFA00DAFC6F /* MGTwitterStatusesLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterStatusesLibXMLParser.m; sourceTree = "<group>"; };
+		7D31D20610F9FBFB00DAFC6F /* MGTwitterUsersLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterUsersLibXMLParser.h; sourceTree = "<group>"; };
+		7D31D20710F9FBFB00DAFC6F /* MGTwitterUsersLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterUsersLibXMLParser.m; sourceTree = "<group>"; };
+		7D31D20810F9FBFB00DAFC6F /* MGTwitterMessagesLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMessagesLibXMLParser.h; sourceTree = "<group>"; };
+		7D31D20910F9FBFB00DAFC6F /* MGTwitterMessagesLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMessagesLibXMLParser.m; sourceTree = "<group>"; };
+		7D31D20A10F9FBFB00DAFC6F /* MGTwitterMiscLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMiscLibXMLParser.h; sourceTree = "<group>"; };
+		7D31D20B10F9FBFB00DAFC6F /* MGTwitterMiscLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMiscLibXMLParser.m; sourceTree = "<group>"; };
+		7D31D20C10F9FBFB00DAFC6F /* MGTwitterEngineGlobalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterEngineGlobalHeader.h; sourceTree = "<group>"; };
+		7D31D20D10F9FBFB00DAFC6F /* MGTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterEngine.h; sourceTree = "<group>"; };
+		7D31D20E10F9FBFB00DAFC6F /* MGTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterEngine.m; sourceTree = "<group>"; };
+		7D31D20F10F9FBFB00DAFC6F /* MGTwitterEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterEngineDelegate.h; sourceTree = "<group>"; };
+		7D31D21010F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterHTTPURLConnection.h; sourceTree = "<group>"; };
+		7D31D21110F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterHTTPURLConnection.m; sourceTree = "<group>"; };
+		7D31D21210F9FBFB00DAFC6F /* MGTwitterRequestTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterRequestTypes.h; sourceTree = "<group>"; };
+		7D31D21310F9FBFB00DAFC6F /* MGTwitterParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterParserDelegate.h; sourceTree = "<group>"; };
+		7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tealeafdaemon.m; sourceTree = "<group>"; };
+		7D31D23210F9FD5B00DAFC6F /* DaemonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaemonController.h; sourceTree = "<group>"; };
+		7D31D23310F9FD5B00DAFC6F /* DaemonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaemonController.m; sourceTree = "<group>"; };
+		7D31D2FC10FA076700DAFC6F /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* TeaLeaf-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TeaLeaf-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* TeaLeaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaLeaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D31D1D210F9FAF900DAFC6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D31D2C110FA049600DAFC6F /* Cocoa.framework in Frameworks */,
+				7D31D23510F9FD7400DAFC6F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3D80F4B6AC300CF3369 /* TeaLeafAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* TeaLeafAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* TeaLeaf.app */,
+				7D31D1D410F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* TeaLeaf */ = {
+			isa = PBXGroup;
+			children = (
+				7D31D0F410F9D6DB00DAFC6F /* Shared Code */,
+				7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config */,
+				7D31D1DA10F9FB2700DAFC6F /* Daemon */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = TeaLeaf;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* TeaLeaf_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* TeaLeaf-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+			);
+			name = "Tea Leaf Config";
+			sourceTree = "<group>";
+		};
+		7D31D0F410F9D6DB00DAFC6F /* Shared Code */ = {
+			isa = PBXGroup;
+			children = (
+				7D31D1E310F9FBFA00DAFC6F /* MGTwitterEngine */,
+				7D31D0FC10F9D70000DAFC6F /* Globals.h */,
+				7D31D0FD10F9D70000DAFC6F /* Globals.m */,
+				7D31D12810F9DC0F00DAFC6F /* ConfigurationFileManager.h */,
+				7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */,
+			);
+			name = "Shared Code";
+			sourceTree = "<group>";
+		};
+		7D31D1DA10F9FB2700DAFC6F /* Daemon */ = {
+			isa = PBXGroup;
+			children = (
+				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
+				7D31D23210F9FD5B00DAFC6F /* DaemonController.h */,
+				7D31D23310F9FD5B00DAFC6F /* DaemonController.m */,
+			);
+			name = Daemon;
+			sourceTree = "<group>";
+		};
+		7D31D1E310F9FBFA00DAFC6F /* MGTwitterEngine */ = {
+			isa = PBXGroup;
+			children = (
+				7D31D2FC10FA076700DAFC6F /* README.txt */,
+				7D31D20C10F9FBFB00DAFC6F /* MGTwitterEngineGlobalHeader.h */,
+				7D31D20D10F9FBFB00DAFC6F /* MGTwitterEngine.h */,
+				7D31D20E10F9FBFB00DAFC6F /* MGTwitterEngine.m */,
+				7D31D20F10F9FBFB00DAFC6F /* MGTwitterEngineDelegate.h */,
+				7D31D21010F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.h */,
+				7D31D21110F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.m */,
+				7D31D21210F9FBFB00DAFC6F /* MGTwitterRequestTypes.h */,
+				7D31D21310F9FBFB00DAFC6F /* MGTwitterParserDelegate.h */,
+				7D31D20110F9FBFA00DAFC6F /* Twitter LibXML Parsers */,
+				7D31D1F610F9FBFA00DAFC6F /* Twitter NSXML Parsers */,
+				7D31D1E910F9FBFA00DAFC6F /* Twitter YAJL Parsers */,
+				7D31D1E410F9FBFA00DAFC6F /* Categories */,
+			);
+			name = MGTwitterEngine;
+			sourceTree = "<group>";
+		};
+		7D31D1E410F9FBFA00DAFC6F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7D31D1E510F9FBFA00DAFC6F /* NSString+UUID.h */,
+				7D31D1E610F9FBFA00DAFC6F /* NSString+UUID.m */,
+				7D31D1E710F9FBFA00DAFC6F /* NSData+Base64.h */,
+				7D31D1E810F9FBFA00DAFC6F /* NSData+Base64.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		7D31D1E910F9FBFA00DAFC6F /* Twitter YAJL Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				7D31D1EA10F9FBFA00DAFC6F /* MGTwitterYAJLParser.h */,
+				7D31D1EB10F9FBFA00DAFC6F /* MGTwitterYAJLParser.m */,
+				7D31D1EC10F9FBFA00DAFC6F /* MGTwitterStatusesYAJLParser.h */,
+				7D31D1ED10F9FBFA00DAFC6F /* MGTwitterStatusesYAJLParser.m */,
+				7D31D1EE10F9FBFA00DAFC6F /* MGTwitterUsersYAJLParser.h */,
+				7D31D1EF10F9FBFA00DAFC6F /* MGTwitterUsersYAJLParser.m */,
+				7D31D1F010F9FBFA00DAFC6F /* MGTwitterMessagesYAJLParser.h */,
+				7D31D1F110F9FBFA00DAFC6F /* MGTwitterMessagesYAJLParser.m */,
+				7D31D1F210F9FBFA00DAFC6F /* MGTwitterMiscYAJLParser.h */,
+				7D31D1F310F9FBFA00DAFC6F /* MGTwitterMiscYAJLParser.m */,
+				7D31D1F410F9FBFA00DAFC6F /* MGTwitterSearchYAJLParser.h */,
+				7D31D1F510F9FBFA00DAFC6F /* MGTwitterSearchYAJLParser.m */,
+			);
+			name = "Twitter YAJL Parsers";
+			sourceTree = "<group>";
+		};
+		7D31D1F610F9FBFA00DAFC6F /* Twitter NSXML Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				7D31D1F710F9FBFA00DAFC6F /* MGTwitterXMLParser.h */,
+				7D31D1F810F9FBFA00DAFC6F /* MGTwitterXMLParser.m */,
+				7D31D1F910F9FBFA00DAFC6F /* MGTwitterStatusesParser.h */,
+				7D31D1FA10F9FBFA00DAFC6F /* MGTwitterStatusesParser.m */,
+				7D31D1FB10F9FBFA00DAFC6F /* MGTwitterUsersParser.h */,
+				7D31D1FC10F9FBFA00DAFC6F /* MGTwitterUsersParser.m */,
+				7D31D1FD10F9FBFA00DAFC6F /* MGTwitterMessagesParser.h */,
+				7D31D1FE10F9FBFA00DAFC6F /* MGTwitterMessagesParser.m */,
+				7D31D1FF10F9FBFA00DAFC6F /* MGTwitterMiscParser.h */,
+				7D31D20010F9FBFA00DAFC6F /* MGTwitterMiscParser.m */,
+			);
+			name = "Twitter NSXML Parsers";
+			sourceTree = "<group>";
+		};
+		7D31D20110F9FBFA00DAFC6F /* Twitter LibXML Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				7D31D20210F9FBFA00DAFC6F /* MGTwitterLibXMLParser.h */,
+				7D31D20310F9FBFA00DAFC6F /* MGTwitterLibXMLParser.m */,
+				7D31D20410F9FBFA00DAFC6F /* MGTwitterStatusesLibXMLParser.h */,
+				7D31D20510F9FBFA00DAFC6F /* MGTwitterStatusesLibXMLParser.m */,
+				7D31D20610F9FBFB00DAFC6F /* MGTwitterUsersLibXMLParser.h */,
+				7D31D20710F9FBFB00DAFC6F /* MGTwitterUsersLibXMLParser.m */,
+				7D31D20810F9FBFB00DAFC6F /* MGTwitterMessagesLibXMLParser.h */,
+				7D31D20910F9FBFB00DAFC6F /* MGTwitterMessagesLibXMLParser.m */,
+				7D31D20A10F9FBFB00DAFC6F /* MGTwitterMiscLibXMLParser.h */,
+				7D31D20B10F9FBFB00DAFC6F /* MGTwitterMiscLibXMLParser.m */,
+			);
+			name = "Twitter LibXML Parsers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D31D1D310F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D31D1DB10F9FB2700DAFC6F /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */;
+			buildPhases = (
+				7D31D1D110F9FAF900DAFC6F /* Sources */,
+				7D31D1D210F9FAF900DAFC6F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D31D1D910F9FB1100DAFC6F /* PBXTargetDependency */,
+			);
+			name = uk.co.swandrift.tealeaf;
+			productName = uk.co.swandrift.tealeaf;
+			productReference = 7D31D1D410F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */;
+			productType = "com.apple.product-type.tool";
+		};
+		8D1107260486CEB800E47090 /* TeaLeaf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TeaLeaf" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeaLeaf;
+			productInstallPath = "$(HOME)/Applications";
+			productName = TeaLeaf;
+			productReference = 8D1107320486CEB800E47090 /* TeaLeaf.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TeaLeaf" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* TeaLeaf */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* TeaLeaf */,
+				7D31D1D310F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				7D31D11E10F9DB7000DAFC6F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D31D1D110F9FAF900DAFC6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D31D2CC10FA04F700DAFC6F /* ConfigurationFileManager.m in Sources */,
+				7D31D2CF10FA050200DAFC6F /* Globals.m in Sources */,
+				7D31D21410F9FBFB00DAFC6F /* NSString+UUID.m in Sources */,
+				7D31D21510F9FBFB00DAFC6F /* NSData+Base64.m in Sources */,
+				7D31D21C10F9FBFB00DAFC6F /* MGTwitterXMLParser.m in Sources */,
+				7D31D21D10F9FBFB00DAFC6F /* MGTwitterStatusesParser.m in Sources */,
+				7D31D21E10F9FBFB00DAFC6F /* MGTwitterUsersParser.m in Sources */,
+				7D31D21F10F9FBFB00DAFC6F /* MGTwitterMessagesParser.m in Sources */,
+				7D31D22010F9FBFB00DAFC6F /* MGTwitterMiscParser.m in Sources */,
+				7D31D22610F9FBFB00DAFC6F /* MGTwitterEngine.m in Sources */,
+				7D31D22710F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.m in Sources */,
+				7D31D23110F9FD1C00DAFC6F /* tealeafdaemon.m in Sources */,
+				7D31D23410F9FD5B00DAFC6F /* DaemonController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* TeaLeafAppDelegate.m in Sources */,
+				7D31D0FE10F9D70000DAFC6F /* Globals.m in Sources */,
+				7D31D12A10F9DC0F00DAFC6F /* ConfigurationFileManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D31D1D910F9FB1100DAFC6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* TeaLeaf */;
+			targetProxy = 7D31D1D810F9FB1100DAFC6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D31D1D610F9FAFA00DAFC6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = uk.co.swandrift.tealeaf;
+			};
+			name = Debug;
+		};
+		7D31D1D710F9FAFA00DAFC6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = uk.co.swandrift.tealeaf;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TeaLeaf_Prefix.pch;
+				INFOPLIST_FILE = "TeaLeaf-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = TeaLeaf;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TeaLeaf_Prefix.pch;
+				INFOPLIST_FILE = "TeaLeaf-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = TeaLeaf;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D31D1DB10F9FB2700DAFC6F /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D31D1D610F9FAFA00DAFC6F /* Debug */,
+				7D31D1D710F9FAFA00DAFC6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TeaLeaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TeaLeaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
