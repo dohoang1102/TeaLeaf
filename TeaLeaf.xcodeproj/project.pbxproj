@@ -8,38 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		256AC3DA0F4B6AC300CF3369 /* TeaLeafAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* TeaLeafAppDelegate.m */; };
-		7D31D0FE10F9D70000DAFC6F /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
+		7D1DD717114D230C00FE9FA3 /* FileServiceConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD716114D230C00FE9FA3 /* FileServiceConfigView.xib */; };
+		7D1DD71A114D235E00FE9FA3 /* FileServiceConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DD719114D235E00FE9FA3 /* FileServiceConfigController.m */; };
+		7D1DD763114D76B600FE9FA3 /* daemon_started.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD761114D76B600FE9FA3 /* daemon_started.png */; };
+		7D1DD764114D76B600FE9FA3 /* daemon_stopped.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD762114D76B600FE9FA3 /* daemon_stopped.png */; };
 		7D31D11E10F9DB7000DAFC6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */; };
-		7D31D12A10F9DC0F00DAFC6F /* ConfigurationFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */; };
-		7D31D21410F9FBFB00DAFC6F /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1E610F9FBFA00DAFC6F /* NSString+UUID.m */; };
-		7D31D21510F9FBFB00DAFC6F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1E810F9FBFA00DAFC6F /* NSData+Base64.m */; };
-		7D31D21C10F9FBFB00DAFC6F /* MGTwitterXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1F810F9FBFA00DAFC6F /* MGTwitterXMLParser.m */; };
-		7D31D21D10F9FBFB00DAFC6F /* MGTwitterStatusesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1FA10F9FBFA00DAFC6F /* MGTwitterStatusesParser.m */; };
-		7D31D21E10F9FBFB00DAFC6F /* MGTwitterUsersParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1FC10F9FBFA00DAFC6F /* MGTwitterUsersParser.m */; };
-		7D31D21F10F9FBFB00DAFC6F /* MGTwitterMessagesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D1FE10F9FBFA00DAFC6F /* MGTwitterMessagesParser.m */; };
-		7D31D22010F9FBFB00DAFC6F /* MGTwitterMiscParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D20010F9FBFA00DAFC6F /* MGTwitterMiscParser.m */; };
-		7D31D22610F9FBFB00DAFC6F /* MGTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D20E10F9FBFB00DAFC6F /* MGTwitterEngine.m */; };
-		7D31D22710F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D21110F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.m */; };
-		7D31D23110F9FD1C00DAFC6F /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
-		7D31D23410F9FD5B00DAFC6F /* DaemonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23310F9FD5B00DAFC6F /* DaemonController.m */; };
-		7D31D23510F9FD7400DAFC6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
-		7D31D2C110FA049600DAFC6F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		7D31D2CC10FA04F700DAFC6F /* ConfigurationFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */; };
-		7D31D2CF10FA050200DAFC6F /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
+		7D4AB4991150C77D00C14940 /* ServiceTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4AB4981150C77D00C14940 /* ServiceTypes.plist */; };
+		7D4AB4DA115106F300C14940 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */; };
+		7D4AB5101151075E00C14940 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7D31D1D810F9FB1100DAFC6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090;
-			remoteInfo = TeaLeaf;
+/* Begin PBXCopyFilesBuildPhase section */
+		7D4AB4DF1151074F00C14940 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D4AB5101151075E00C14940 /* BWToolkitFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -51,12 +44,16 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7D1DD716114D230C00FE9FA3 /* FileServiceConfigView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileServiceConfigView.xib; sourceTree = "<group>"; };
+		7D1DD718114D235E00FE9FA3 /* FileServiceConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileServiceConfigController.h; sourceTree = "<group>"; };
+		7D1DD719114D235E00FE9FA3 /* FileServiceConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileServiceConfigController.m; sourceTree = "<group>"; };
+		7D1DD761114D76B600FE9FA3 /* daemon_started.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daemon_started.png; sourceTree = "<group>"; };
+		7D1DD762114D76B600FE9FA3 /* daemon_stopped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daemon_stopped.png; sourceTree = "<group>"; };
 		7D31D0FC10F9D70000DAFC6F /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		7D31D0FD10F9D70000DAFC6F /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 		7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		7D31D12810F9DC0F00DAFC6F /* ConfigurationFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationFileManager.h; sourceTree = "<group>"; };
 		7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationFileManager.m; sourceTree = "<group>"; };
-		7D31D1D410F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = uk.co.swandrift.tealeaf; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D31D1E510F9FBFA00DAFC6F /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		7D31D1E610F9FBFA00DAFC6F /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
 		7D31D1E710F9FBFA00DAFC6F /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -105,6 +102,8 @@
 		7D31D23210F9FD5B00DAFC6F /* DaemonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaemonController.h; sourceTree = "<group>"; };
 		7D31D23310F9FD5B00DAFC6F /* DaemonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaemonController.m; sourceTree = "<group>"; };
 		7D31D2FC10FA076700DAFC6F /* MGTwitterREADME.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MGTwitterREADME.txt; sourceTree = "<group>"; };
+		7D4AB4981150C77D00C14940 /* ServiceTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceTypes.plist; sourceTree = "<group>"; };
+		7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/rbt/Development/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
 		7DFECCCA1142A83500AA2151 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
 		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		7DFECCD51142AA0500AA2151 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -114,39 +113,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D31D1D210F9FAF900DAFC6F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D31D2C110FA049600DAFC6F /* Cocoa.framework in Frameworks */,
-				7D31D23510F9FD7400DAFC6F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				7D4AB4DA115106F300C14940 /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				256AC3D80F4B6AC300CF3369 /* TeaLeafAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* TeaLeafAppDelegate.m */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -165,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* TeaLeaf.app */,
-				7D31D1D410F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,8 +155,8 @@
 		29B97314FDCFA39411CA2CEA /* TeaLeaf */ = {
 			isa = PBXGroup;
 			children = (
-				7D31D0F410F9D6DB00DAFC6F /* Shared Code */,
-				7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config */,
+				7D31D0F410F9D6DB00DAFC6F /* Archive for Now */,
+				7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config App */,
 				7D31D1DA10F9FB2700DAFC6F /* Daemon */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -194,16 +176,6 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8D1107310486CEB800E47090 /* TeaLeaf-Info.plist */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,26 +185,75 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config */ = {
+		7D1DD707114D0CEC00FE9FA3 /* Config Views */ = {
 			isa = PBXGroup;
 			children = (
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				7D1DD70B114D213400FE9FA3 /* File */,
+				7D1DD708114D0CFA00FE9FA3 /* Twitter */,
 			);
-			name = "Tea Leaf Config";
+			name = "Config Views";
 			sourceTree = "<group>";
 		};
-		7D31D0F410F9D6DB00DAFC6F /* Shared Code */ = {
+		7D1DD708114D0CFA00FE9FA3 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		7D1DD70B114D213400FE9FA3 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				7D1DD716114D230C00FE9FA3 /* FileServiceConfigView.xib */,
+				7D1DD718114D235E00FE9FA3 /* FileServiceConfigController.h */,
+				7D1DD719114D235E00FE9FA3 /* FileServiceConfigController.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
+		7D1DD712114D21B300FE9FA3 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7D1DD75C114D729C00FE9FA3 /* Resources */,
+				256AC3D90F4B6AC300CF3369 /* TeaLeafAppDelegate.m */,
+				256AC3D80F4B6AC300CF3369 /* TeaLeafAppDelegate.h */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		7D1DD75C114D729C00FE9FA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D1DD761114D76B600FE9FA3 /* daemon_started.png */,
+				7D1DD762114D76B600FE9FA3 /* daemon_stopped.png */,
+				7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */,
+				8D1107310486CEB800E47090 /* TeaLeaf-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				7D4AB4981150C77D00C14940 /* ServiceTypes.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config App */ = {
+			isa = PBXGroup;
+			children = (
+				7D1DD712114D21B300FE9FA3 /* Main Menu */,
+				7D1DD707114D0CEC00FE9FA3 /* Config Views */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+			);
+			name = "Tea Leaf Config App";
+			sourceTree = "<group>";
+		};
+		7D31D0F410F9D6DB00DAFC6F /* Archive for Now */ = {
 			isa = PBXGroup;
 			children = (
 				7D31D1E310F9FBFA00DAFC6F /* MGTwitterEngine */,
-				7D31D0FC10F9D70000DAFC6F /* Globals.h */,
-				7D31D0FD10F9D70000DAFC6F /* Globals.m */,
 				7D31D12810F9DC0F00DAFC6F /* ConfigurationFileManager.h */,
 				7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */,
+				7D31D0FC10F9D70000DAFC6F /* Globals.h */,
+				7D31D0FD10F9D70000DAFC6F /* Globals.m */,
 			);
-			name = "Shared Code";
+			name = "Archive for Now";
 			sourceTree = "<group>";
 		};
 		7D31D1DA10F9FB2700DAFC6F /* Daemon */ = {
@@ -333,23 +354,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D31D1D310F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7D31D1DB10F9FB2700DAFC6F /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */;
-			buildPhases = (
-				7D31D1D110F9FAF900DAFC6F /* Sources */,
-				7D31D1D210F9FAF900DAFC6F /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7D31D1D910F9FB1100DAFC6F /* PBXTargetDependency */,
-			);
-			name = uk.co.swandrift.tealeaf;
-			productName = uk.co.swandrift.tealeaf;
-			productReference = 7D31D1D410F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */;
-			productType = "com.apple.product-type.tool";
-		};
 		8D1107260486CEB800E47090 /* TeaLeaf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TeaLeaf" */;
@@ -357,6 +361,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				7D4AB4DF1151074F00C14940 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -381,7 +386,6 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* TeaLeaf */,
-				7D31D1D310F9FAF900DAFC6F /* uk.co.swandrift.tealeaf */,
 			);
 		};
 /* End PBXProject section */
@@ -393,52 +397,27 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				7D31D11E10F9DB7000DAFC6F /* MainMenu.xib in Resources */,
+				7D1DD717114D230C00FE9FA3 /* FileServiceConfigView.xib in Resources */,
+				7D1DD763114D76B600FE9FA3 /* daemon_started.png in Resources */,
+				7D1DD764114D76B600FE9FA3 /* daemon_stopped.png in Resources */,
+				7D4AB4991150C77D00C14940 /* ServiceTypes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D31D1D110F9FAF900DAFC6F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D31D2CC10FA04F700DAFC6F /* ConfigurationFileManager.m in Sources */,
-				7D31D2CF10FA050200DAFC6F /* Globals.m in Sources */,
-				7D31D21410F9FBFB00DAFC6F /* NSString+UUID.m in Sources */,
-				7D31D21510F9FBFB00DAFC6F /* NSData+Base64.m in Sources */,
-				7D31D21C10F9FBFB00DAFC6F /* MGTwitterXMLParser.m in Sources */,
-				7D31D21D10F9FBFB00DAFC6F /* MGTwitterStatusesParser.m in Sources */,
-				7D31D21E10F9FBFB00DAFC6F /* MGTwitterUsersParser.m in Sources */,
-				7D31D21F10F9FBFB00DAFC6F /* MGTwitterMessagesParser.m in Sources */,
-				7D31D22010F9FBFB00DAFC6F /* MGTwitterMiscParser.m in Sources */,
-				7D31D22610F9FBFB00DAFC6F /* MGTwitterEngine.m in Sources */,
-				7D31D22710F9FBFB00DAFC6F /* MGTwitterHTTPURLConnection.m in Sources */,
-				7D31D23110F9FD1C00DAFC6F /* tealeafdaemon.m in Sources */,
-				7D31D23410F9FD5B00DAFC6F /* DaemonController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* TeaLeafAppDelegate.m in Sources */,
-				7D31D0FE10F9D70000DAFC6F /* Globals.m in Sources */,
-				7D31D12A10F9DC0F00DAFC6F /* ConfigurationFileManager.m in Sources */,
+				7D1DD71A114D235E00FE9FA3 /* FileServiceConfigController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7D31D1D910F9FB1100DAFC6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D1107260486CEB800E47090 /* TeaLeaf */;
-			targetProxy = 7D31D1D810F9FB1100DAFC6F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -452,58 +431,16 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7D31D1D610F9FAFA00DAFC6F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INSTALL_PATH = /usr/local/bin;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = uk.co.swandrift.tealeaf;
-			};
-			name = Debug;
-		};
-		7D31D1D710F9FAFA00DAFC6F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INSTALL_PATH = /usr/local/bin;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = uk.co.swandrift.tealeaf;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../BWToolkit\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -524,6 +461,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../BWToolkit\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TeaLeaf_Prefix.pch;
@@ -564,15 +505,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D31D1DB10F9FB2700DAFC6F /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7D31D1D610F9FAFA00DAFC6F /* Debug */,
-				7D31D1D710F9FAFA00DAFC6F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TeaLeaf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

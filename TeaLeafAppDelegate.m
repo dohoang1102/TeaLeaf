@@ -7,67 +7,162 @@
 //
 
 #import "TeaLeafAppDelegate.h"
-#import "ConfigurationFileManager.h"
-#import "Globals.h"
+
+@interface TeaLeafAppDelegate(PrivateMethods)
+
+-(void)createNewConfigView:(NSString *) serviceName type:(NSString *)type;
+
+@end
 
 
 @implementation TeaLeafAppDelegate
 
 @synthesize window;
-@synthesize twitterUsernameField;
-@synthesize twitterPasswordField;
-@synthesize directMessageKeywordField;
-@synthesize timeIntervalToCheckField;
-@synthesize configurationFileManager;
-@synthesize isStolenCheckBox;
+@synthesize daemonStartButton;
+@synthesize viewBox;
+@synthesize serviceConfigViews;
+@synthesize messagingConfig;
+@synthesize newConfigViewSheet;
+@synthesize serviceTypePopup;
+@synthesize serviceNameField;
+@synthesize serviceTypes;
+
+
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	NSLog(@"in applicationDidFinishLaunching");
 	
-	// Get the configuration
-	self.configurationFileManager = [[ConfigurationFileManager alloc] init];
 	
-	// populate the text fields
-	[self.twitterUsernameField setStringValue:self.configurationFileManager.twitterUsername];
-	[self.twitterPasswordField setStringValue:self.configurationFileManager.twitterPassword];
-	[self.directMessageKeywordField setStringValue:self.configurationFileManager.directMessageKeyword];
-	[self.timeIntervalToCheckField setIntValue:self.configurationFileManager.timeIntervalToCheck];
+	// load all the service types from a plist in the bundle and stick in an array
+	NSBundle *thisBundle = [NSBundle mainBundle];
+	NSURL *serviceTypesURL = [thisBundle URLForResource:@"ServiceTypes" withExtension:@"plist"];	
+	self.serviceTypes = [NSArray arrayWithContentsOfURL:serviceTypesURL];	
+	NSLog(@"serviceTypes=%@",self.serviceTypes);
 	
-	[self.isStolenCheckBox setState:(self.configurationFileManager.isStolen ? NSOnState : NSOffState)];
-
+	
+	// register for notification when the selection changes in the table
+	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+	[nc addObserver:self 
+		   selector:@selector(configViewTableSelectionChanged:) 
+			   name:NSTableViewSelectionDidChangeNotification
+			 object:self];
+	
+	// read configuration from the MessagingConfig.plist file into the messagingConfig array
+	
+	// loop this array. Instantiate a viewCntroller of the correct type,
+	// from the config, we set the config dictionary
+	// and display it in the box
 	
 }
 
 -(void)applicationWillTerminate:(NSNotification *)notification
 {
-	[self save:nil];  // hacky - change this
+	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+	[nc removeObserver:self];
+	self.serviceTypes=nil;
 }
 
 -(void)dealloc
 {
-	self.configurationFileManager = nil;
+	
 	[super dealloc];
 }
 
 
--(IBAction)save:(NSButton *)sender
+#pragma mark add and remove views
+-(IBAction)addView:(id)sender 
 {
-	self.configurationFileManager.twitterUsername = [self.twitterUsernameField stringValue];
-	self.configurationFileManager.twitterPassword = [self.twitterPasswordField stringValue];
-	self.configurationFileManager.directMessageKeyword = [self.directMessageKeywordField stringValue];
-	self.configurationFileManager.timeIntervalToCheck = [self.timeIntervalToCheckField intValue];
+	// drop the panel asking for a name, and a type
+	// instantiate a view
+	// add it to the array, release it
+	// add it to the box
 	
-	if (NSOnState == [self.isStolenCheckBox state]) {
-		NSLog (@"on");
-		self.configurationFileManager.isStolen = YES;
-	} else {
-		NSLog(@"off");
-		self.configurationFileManager.isStolen = NO;
-	}
+	[NSApp beginSheet:self.newConfigViewSheet
+	   modalForWindow:self.window 
+		modalDelegate:nil
+	   didEndSelector:NULL
+		  contextInfo:NULL];
+	
+	
+}
+								
+// called when a button in the newConfigView is pressed
+-(IBAction)stopSheet:(NSButton *)whichButton
+{
+	
+	
 
 	
-	[self.configurationFileManager save];
+	if ([[whichButton title] isEqualToString:@"Create"]) {
+		[self createNewConfigView:[self.serviceNameField stringValue] 
+							 type:[self.serviceTypePopup titleOfSelectedItem]]; 
+	} 
+	else if ([[whichButton title] isEqualToString:@"Cancel"]) {
+			NSLog(@"Cancel button pressed from sheet");
+	}
+	else {
+		NSLog (@"something odd happened");
+	}
+
+	[self.newConfigViewSheet orderOut:self];
+	[NSApp endSheet:self.newConfigViewSheet];
+		
 }
+
+
+-(IBAction)removeView:(id)sender 
+{
+	
+}
+	
+
+-(void)configViewTableSelectionChanged:(NSNotification *)note
+{
+	// swap out the views
+	
+}
+
+-(IBAction)apply:(id)sender
+{
+	// save changes to config file
+}
+
+
+-(IBAction)revert:(id)sender
+{
+}
+
+-(IBAction)close:(NSButton *)sender {}
+
+#pragma mark configViewTable datasource methods;
+
+-(id)tableView:(NSTableView *)aTableView
+	objectValueForTableColumn:(NSTableColumn *)aTableColumn
+	row:(NSInteger)rowIndex
+{
+	return [serviceConfigViews objectAtIndex:rowIndex];
+}
+
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
+{
+    return [self.serviceConfigViews count];
+} 
+
+#pragma mark NSApplication delegate methods
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)app
+{
+	return YES;
+}
+
+#pragma mark NSApplication private methods
+
+-(void)createNewConfigView:(NSString *) serviceName type:(NSString *)type
+{
+	NSLog(@"will create a view named: %@ of type: %@", serviceName, type);
+}
+
 @end

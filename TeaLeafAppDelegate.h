@@ -7,32 +7,54 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class ConfigurationFileManager;
+#import <BWToolkitFramework/BWToolkitFramework.h>
+
 
 @interface TeaLeafAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
+
+	// main window controls
+    NSWindow	*window;
+	NSBox		*viewBox;
+	NSTableView *configViewTable;
+	NSButton	*daemonStartButton;
+	NSButton	*revertButton;
+	NSButton	*saveButton;
 	
-	NSTextField	*twitterUsernameField;
-	NSTextField	*twitterPasswordField;
-	NSTextField	*directMessageKeywordField;
-	NSTextField *timeIntervalToCheckField;
-	NSButton	*isStolenCheckBox;
+	// config view sheet and controls
+	NSWindow		*newConfigViewSheet;
+	NSPopUpButton	*serviceTypePopup;
+	NSTextField		*serviceNameField;
 	
-	ConfigurationFileManager *configurationFileManager;
+	// configuration data etc
+	NSArray			*serviceTypes;			// loaded from plist
+	NSMutableArray	*serviceConfigViews;
+	NSArray			*messagingConfig;	
+	
 	
 }
 
--(IBAction)save:(NSButton *)sender;
+-(IBAction)addView:(id)sender;
+-(IBAction)removeView:(id)sender;
+-(IBAction)stopSheet:(NSButton *)whichButton;
+
+
+-(IBAction)apply:(NSButton *)sender;
+-(IBAction)revert:(NSButton *)sender;
+
+-(IBAction)close:(NSButton *)sender;
+
+
 
 @property (assign) IBOutlet NSWindow		*window;
-@property (assign) IBOutlet NSTextField		*twitterUsernameField;
-@property (assign) IBOutlet NSTextField		*twitterPasswordField;
-@property (assign) IBOutlet NSTextField		*directMessageKeywordField;
-@property (assign) IBOutlet NSTextField		*timeIntervalToCheckField;
-@property (assign) IBOutlet NSButton		*isStolenCheckBox;
+@property (assign) IBOutlet NSBox			*viewBox;
+@property (assign) IBOutlet NSButton		*daemonStartButton;
+@property (assign) IBOutlet NSWindow		*newConfigViewSheet;
+@property (assign) IBOutlet NSPopUpButton	*serviceTypePopup;
+@property (assign) IBOutlet NSTextField		*serviceNameField;
 
+@property (copy, nonatomic) NSArray			*serviceTypes;
+@property (copy, nonatomic) NSMutableArray  *serviceConfigViews;
+@property (copy, nonatomic) NSArray		    *messagingConfig;	
 
-
-@property (readwrite, nonatomic, retain) ConfigurationFileManager *configurationFileManager;
 
 @end
