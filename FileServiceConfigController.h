@@ -7,13 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ManagingServiceConfigController.h";
 
 
-@interface FileServiceConfigController : NSViewController {
-	NSMutableDictionary *configDictionary;
+@interface FileServiceConfigController : ManagingServiceConfigController {
 
 }
-
-@property (copy, nonatomic) NSMutableDictionary *configDictionary;
 
 @end

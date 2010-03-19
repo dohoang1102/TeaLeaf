@@ -15,7 +15,7 @@
 	// main window controls
     NSWindow	*window;
 	NSBox		*viewBox;
-	NSTableView *configViewTable;
+	NSTableView *servicesTable;
 	NSButton	*daemonStartButton;
 	NSButton	*revertButton;
 	NSButton	*saveButton;
@@ -27,7 +27,7 @@
 	
 	// configuration data etc
 	NSArray			*serviceTypes;			// loaded from plist
-	NSMutableArray	*serviceConfigViews;
+	NSMutableArray	*serviceConfigControllers;
 	NSArray			*messagingConfig;	
 	
 	
@@ -51,9 +51,11 @@
 @property (assign) IBOutlet NSWindow		*newConfigViewSheet;
 @property (assign) IBOutlet NSPopUpButton	*serviceTypePopup;
 @property (assign) IBOutlet NSTextField		*serviceNameField;
+@property (assign) IBOutlet NSTableView		*servicesTable;
+
 
 @property (copy, nonatomic) NSArray			*serviceTypes;
-@property (copy, nonatomic) NSMutableArray  *serviceConfigViews;
+@property (retain, nonatomic) NSMutableArray  *serviceConfigControllers;  // cannot use copy on mutable object
 @property (copy, nonatomic) NSArray		    *messagingConfig;	
 
 

@@ -7,10 +7,13 @@
 //
 
 #import "TeaLeafAppDelegate.h"
+#import "ManagingServiceConfigController.h"
+
+
 
 @interface TeaLeafAppDelegate(PrivateMethods)
 
--(void)createNewConfigView:(NSString *) serviceName type:(NSString *)type;
+-(void)createServiceConfigView:(NSString *) serviceName type:(NSString *)type;
 
 @end
 
@@ -20,8 +23,9 @@
 @synthesize window;
 @synthesize daemonStartButton;
 @synthesize viewBox;
-@synthesize serviceConfigViews;
+@synthesize serviceConfigControllers;
 @synthesize messagingConfig;
+@synthesize servicesTable;
 @synthesize newConfigViewSheet;
 @synthesize serviceTypePopup;
 @synthesize serviceNameField;
@@ -32,8 +36,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	NSLog(@"in applicationDidFinishLaunching");
+	//NSLog(@"in applicationDidFinishLaunching");
 	
+	// do some initialization
+	self.serviceConfigControllers = [NSMutableArray arrayWithCapacity:10];
 	
 	// load all the service types from a plist in the bundle and stick in an array
 	NSBundle *thisBundle = [NSBundle mainBundle];
@@ -61,7 +67,8 @@
 {
 	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 	[nc removeObserver:self];
-	self.serviceTypes=nil;
+	self.serviceTypes = nil;
+	self.serviceConfigControllers = nil;
 }
 
 -(void)dealloc
@@ -92,12 +99,9 @@
 -(IBAction)stopSheet:(NSButton *)whichButton
 {
 	
-	
-
-	
 	if ([[whichButton title] isEqualToString:@"Create"]) {
-		[self createNewConfigView:[self.serviceNameField stringValue] 
-							 type:[self.serviceTypePopup titleOfSelectedItem]]; 
+		[self createServiceConfigView:[self.serviceNameField stringValue] 
+								 type:[self.serviceTypePopup titleOfSelectedItem]]; 
 	} 
 	else if ([[whichButton title] isEqualToString:@"Cancel"]) {
 			NSLog(@"Cancel button pressed from sheet");
@@ -142,13 +146,20 @@
 	objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	row:(NSInteger)rowIndex
 {
-	return [serviceConfigViews objectAtIndex:rowIndex];
+	NSLog(@"in tableView:objectValue...blah");
+	// Not sure if we can do this: we actually have a subclass of
+	// NSViewController
+	ManagingServiceConfigController *service = [self.serviceConfigControllers objectAtIndex:rowIndex];
+	
+	return [service serviceName];
 }
 
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-    return [self.serviceConfigViews count];
+	NSInteger count = [self.serviceConfigControllers count];
+	NSLog(@"no of rows:%i",count);
+    return count;
 } 
 
 #pragma mark NSApplication delegate methods
@@ -160,9 +171,36 @@
 
 #pragma mark NSApplication private methods
 
--(void)createNewConfigView:(NSString *) serviceName type:(NSString *)type
+-(void)createServiceConfigView:(NSString *) serviceName type:(NSString *)type
 {
-	NSLog(@"will create a view named: %@ of type: %@", serviceName, type);
+	NSLog(@"will create a view controller named: %@ of type: %@", serviceName, type);
+	
+	// instantiates a new view controller.
+	
+	// if service type = '`type', then the class name is 
+	// 'TypeServiceConfigController'
+	NSString *className = [NSString stringWithString:@"ServiceConfigController"];
+	NSString *viewControllerName = [type stringByAppendingString:className];
+
+	Class vcClass = NSClassFromString(viewControllerName);
+	
+	ManagingServiceConfigController *vc = [[vcClass alloc] init];
+	
+	// TO DO error check	
+	vc.serviceName = serviceName;
+	
+	NSLog(@"vc: %@", [vc description]);
+	
+	// put it into the array
+	
+	[self.serviceConfigControllers addObject:vc];
+	[vc release];
+	
+	NSLog(@"vc array: %@", self.serviceConfigControllers);
+	
+	// and update the table
+	[self.servicesTable reloadData];
+	
 }
 
 @end

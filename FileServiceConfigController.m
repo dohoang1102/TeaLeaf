@@ -8,10 +8,8 @@
 
 #import "FileServiceConfigController.h"
 
-
 @implementation FileServiceConfigController
 
-@synthesize configDictionary;
 
 -(id)init
 {
