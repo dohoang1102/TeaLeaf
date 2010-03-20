@@ -14,6 +14,10 @@
 @interface TeaLeafAppDelegate(PrivateMethods)
 
 -(void)createServiceConfigView:(NSString *) serviceName type:(NSString *)type;
+-(void)destroyServiceConfigView:(NSUInteger)index;
+-(void)displayViewController:(ManagingServiceConfigController*)viewController;
+-(void)dumpDictionaryOfCurrentlySelectedController;
+
 
 @end
 
@@ -26,12 +30,13 @@
 @synthesize serviceConfigControllers;
 @synthesize messagingConfig;
 @synthesize servicesTable;
+@synthesize removeButton;
 @synthesize newConfigViewSheet;
 @synthesize serviceTypePopup;
 @synthesize serviceNameField;
+//@synthesize arrayController;
 @synthesize serviceTypes;
-
-
+@synthesize currentConfigController;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -44,16 +49,14 @@
 	// load all the service types from a plist in the bundle and stick in an array
 	NSBundle *thisBundle = [NSBundle mainBundle];
 	NSURL *serviceTypesURL = [thisBundle URLForResource:@"ServiceTypes" withExtension:@"plist"];	
-	self.serviceTypes = [NSArray arrayWithContentsOfURL:serviceTypesURL];	
-	NSLog(@"serviceTypes=%@",self.serviceTypes);
-	
+	self.serviceTypes = [NSArray arrayWithContentsOfURL:serviceTypesURL];		
 	
 	// register for notification when the selection changes in the table
 	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 	[nc addObserver:self 
 		   selector:@selector(configViewTableSelectionChanged:) 
 			   name:NSTableViewSelectionDidChangeNotification
-			 object:self];
+			 object:nil];
 	
 	// read configuration from the MessagingConfig.plist file into the messagingConfig array
 	
@@ -82,10 +85,7 @@
 -(IBAction)addView:(id)sender 
 {
 	// drop the panel asking for a name, and a type
-	// instantiate a view
-	// add it to the array, release it
-	// add it to the box
-	
+		
 	[NSApp beginSheet:self.newConfigViewSheet
 	   modalForWindow:self.window 
 		modalDelegate:nil
@@ -110,8 +110,12 @@
 		NSLog (@"something odd happened");
 	}
 
+	//TODO: validate name against existing names 
 	[self.newConfigViewSheet orderOut:self];
 	[NSApp endSheet:self.newConfigViewSheet];
+	
+	// clear out the name field in the sheet
+	[self.serviceNameField setStringValue:@""];
 		
 }
 
@@ -119,17 +123,46 @@
 -(IBAction)removeView:(id)sender 
 {
 	
+	// get the currently selected item
+	NSUInteger index = [self.servicesTable selectedRow];
+	NSLog(@"tableviewselected index: %qu", index);
+	[self destroyServiceConfigView:index];
+	
 }
-	
 
--(void)configViewTableSelectionChanged:(NSNotification *)note
+// Notification method called by servicesTable when selection changed
+-(void)configViewTableSelectionChanged:(NSNotification *)notification
 {
-	// swap out the views
 	
+	//TODO: ERROR CHECK
+	NSInteger selectedItemIndex = [self.servicesTable selectedRow];
+	
+	NSLog(@"in note, selection index=%d", (int)selectedItemIndex);
+	
+    if (selectedItemIndex == -1) {
+		[self displayViewController:nil];
+	}
+	else {
+		// Get the associated view
+		ManagingServiceConfigController *managingSCC = [self.serviceConfigControllers objectAtIndex:selectedItemIndex];
+		
+		[self displayViewController:managingSCC];
+		
+	}
+
+	// set the status of the add button
+	if ([self.serviceConfigControllers count] == 0) {
+		[self.removeButton setEnabled:NO];
+	} 
+	else {
+		[self.removeButton setEnabled:YES];
+	}
+		
 }
 
 -(IBAction)apply:(id)sender
 {
+	[self dumpDictionaryOfCurrentlySelectedController];
 	// save changes to config file
 }
 
@@ -146,9 +179,6 @@
 	objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	row:(NSInteger)rowIndex
 {
-	NSLog(@"in tableView:objectValue...blah");
-	// Not sure if we can do this: we actually have a subclass of
-	// NSViewController
 	ManagingServiceConfigController *service = [self.serviceConfigControllers objectAtIndex:rowIndex];
 	
 	return [service serviceName];
@@ -158,7 +188,6 @@
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
 	NSInteger count = [self.serviceConfigControllers count];
-	NSLog(@"no of rows:%i",count);
     return count;
 } 
 
@@ -171,14 +200,11 @@
 
 #pragma mark NSApplication private methods
 
+// instantiates a new view controller and puts in into the array iVar
 -(void)createServiceConfigView:(NSString *) serviceName type:(NSString *)type
 {
-	NSLog(@"will create a view controller named: %@ of type: %@", serviceName, type);
 	
-	// instantiates a new view controller.
-	
-	// if service type = '`type', then the class name is 
-	// 'TypeServiceConfigController'
+	// if service type = '`type', then the class name is 'TypeServiceConfigController'
 	NSString *className = [NSString stringWithString:@"ServiceConfigController"];
 	NSString *viewControllerName = [type stringByAppendingString:className];
 
@@ -186,21 +212,59 @@
 	
 	ManagingServiceConfigController *vc = [[vcClass alloc] init];
 	
-	// TO DO error check	
+	//TODO: error check	
 	vc.serviceName = serviceName;
-	
-	NSLog(@"vc: %@", [vc description]);
-	
+		
 	// put it into the array
-	
 	[self.serviceConfigControllers addObject:vc];
 	[vc release];
-	
-	NSLog(@"vc array: %@", self.serviceConfigControllers);
-	
-	// and update the table
+		
+	// and update the tableView
 	[self.servicesTable reloadData];
+	
+	// make the table view select this last item.
+	// will kick off an NSTableViewSelectionDidChangeNotification for us, 
+	// which we will use to load the view into the box
+	NSUInteger index = [self.serviceConfigControllers count] - 1;
+	NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:index];
+	[self.servicesTable selectRowIndexes:indexSet byExtendingSelection:NO];
+	
+	//NSLog(@"create: array is now:%@", self.serviceConfigControllers);
+}
+
+// destroys an existing view controller, and reomves from the array
+-(void)destroyServiceConfigView:(NSUInteger)index
+{
+	// remove from the array
+	//NSLog(@"removing object at index %qu", index);
+	[self.serviceConfigControllers removeObjectAtIndex:index];
+	
+	//NSLog(@"destroy: array is now:%@", self.serviceConfigControllers);
+	
+	[self.servicesTable reloadData];
+	
 	
 }
 
+// set the box's view this one
+-(void)displayViewController:(ManagingServiceConfigController*)viewController
+{
+	NSLog (@"displaying view controller:%@", viewController);
+	NSView *view = [viewController view];
+	
+	[self.viewBox setContentView:view];
+	
+	// set the currentclyViewController iVar	
+	self.currentConfigController = viewController;
+
+}
+// for debug - dumps the config dict of the currently selected controller view;
+
+-(void)dumpDictionaryOfCurrentlySelectedController
+{
+	NSDictionary *c = self.currentConfigController.configDictionary;
+	NSLog(@"currentConfigDictionary:%@", c);
+	
+	
+}
 @end

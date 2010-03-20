@@ -17,6 +17,7 @@
 		return nil;
 
 	[self setTitle:@"Configuration for File"];
+	self.serviceType = @"File";
 	
 	return self;
 }

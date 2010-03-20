@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <BWToolkitFramework/BWToolkitFramework.h>
+@class ManagingServiceConfigController;
 
 
 @interface TeaLeafAppDelegate : NSObject <NSApplicationDelegate> {
@@ -16,6 +17,8 @@
     NSWindow	*window;
 	NSBox		*viewBox;
 	NSTableView *servicesTable;
+	BWAnchoredButton *removeButton;
+	
 	NSButton	*daemonStartButton;
 	NSButton	*revertButton;
 	NSButton	*saveButton;
@@ -25,10 +28,14 @@
 	NSPopUpButton	*serviceTypePopup;
 	NSTextField		*serviceNameField;
 	
+	// controllers
+	//NSArrayController *arrayController;
+	
 	// configuration data etc
 	NSArray			*serviceTypes;			// loaded from plist
 	NSMutableArray	*serviceConfigControllers;
 	NSArray			*messagingConfig;	
+	ManagingServiceConfigController *currentConfigController;  // just point to the currently selected in the array
 	
 	
 }
@@ -47,16 +54,19 @@
 
 @property (assign) IBOutlet NSWindow		*window;
 @property (assign) IBOutlet NSBox			*viewBox;
+@property (assign) IBOutlet BWAnchoredButton *removeButton;
 @property (assign) IBOutlet NSButton		*daemonStartButton;
 @property (assign) IBOutlet NSWindow		*newConfigViewSheet;
 @property (assign) IBOutlet NSPopUpButton	*serviceTypePopup;
 @property (assign) IBOutlet NSTextField		*serviceNameField;
 @property (assign) IBOutlet NSTableView		*servicesTable;
 
+//@property (assign) IBOutlet NSArrayController *arrayController;
 
 @property (copy, nonatomic) NSArray			*serviceTypes;
 @property (retain, nonatomic) NSMutableArray  *serviceConfigControllers;  // cannot use copy on mutable object
 @property (copy, nonatomic) NSArray		    *messagingConfig;	
+@property (assign, nonatomic) ManagingServiceConfigController *currentConfigController;
 
 
 @end

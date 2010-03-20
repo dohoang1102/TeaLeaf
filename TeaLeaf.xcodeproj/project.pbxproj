@@ -14,6 +14,8 @@
 		7D1DD763114D76B600FE9FA3 /* daemon_started.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD761114D76B600FE9FA3 /* daemon_started.png */; };
 		7D1DD764114D76B600FE9FA3 /* daemon_stopped.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD762114D76B600FE9FA3 /* daemon_stopped.png */; };
 		7D31D11E10F9DB7000DAFC6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */; };
+		7D3F68B11155263100008258 /* TwitterServiceConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F68AF1155263100008258 /* TwitterServiceConfigController.m */; };
+		7D3F68B21155263100008258 /* TwitterServiceConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F68B01155263100008258 /* TwitterServiceConfigView.xib */; };
 		7D4AB4991150C77D00C14940 /* ServiceTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4AB4981150C77D00C14940 /* ServiceTypes.plist */; };
 		7D4AB4DA115106F300C14940 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */; };
 		7D4AB5101151075E00C14940 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */; };
@@ -105,6 +107,9 @@
 		7D31D23210F9FD5B00DAFC6F /* DaemonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaemonController.h; sourceTree = "<group>"; };
 		7D31D23310F9FD5B00DAFC6F /* DaemonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaemonController.m; sourceTree = "<group>"; };
 		7D31D2FC10FA076700DAFC6F /* MGTwitterREADME.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MGTwitterREADME.txt; sourceTree = "<group>"; };
+		7D3F68AE1155263100008258 /* TwitterServiceConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterServiceConfigController.h; sourceTree = "<group>"; };
+		7D3F68AF1155263100008258 /* TwitterServiceConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterServiceConfigController.m; sourceTree = "<group>"; };
+		7D3F68B01155263100008258 /* TwitterServiceConfigView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterServiceConfigView.xib; sourceTree = "<group>"; };
 		7D4AB4981150C77D00C14940 /* ServiceTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceTypes.plist; sourceTree = "<group>"; };
 		7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/rbt/Development/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
 		7DFECCCA1142A83500AA2151 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
@@ -202,6 +207,9 @@
 		7D1DD708114D0CFA00FE9FA3 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				7D3F68AE1155263100008258 /* TwitterServiceConfigController.h */,
+				7D3F68AF1155263100008258 /* TwitterServiceConfigController.m */,
+				7D3F68B01155263100008258 /* TwitterServiceConfigView.xib */,
 			);
 			name = Twitter;
 			sourceTree = "<group>";
@@ -406,6 +414,7 @@
 				7D1DD763114D76B600FE9FA3 /* daemon_started.png in Resources */,
 				7D1DD764114D76B600FE9FA3 /* daemon_stopped.png in Resources */,
 				7D4AB4991150C77D00C14940 /* ServiceTypes.plist in Resources */,
+				7D3F68B21155263100008258 /* TwitterServiceConfigView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +429,7 @@
 				256AC3DA0F4B6AC300CF3369 /* TeaLeafAppDelegate.m in Sources */,
 				7D1DD71A114D235E00FE9FA3 /* FileServiceConfigController.m in Sources */,
 				7D0E04C71153B153007C3CFE /* ManagingServiceConfigController.m in Sources */,
+				7D3F68B11155263100008258 /* TwitterServiceConfigController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
