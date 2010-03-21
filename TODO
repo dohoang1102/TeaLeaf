@@ -1,6 +1,6 @@
 Lots!
 
-Immediate TODO items
+make the preferences panel reopen after it's bee close
 
 CONFIG APPLICATION:
 - resolve issue with TableView focus ring bottom side near BWtoolkit widgets not visible (removed for now)
@@ -23,6 +23,8 @@ CONFIG APPLICATION:
 - look at espionage for changes to user interface that look cooler. icons next to each service name, for example.
 -		and and enabled or on/off button.
 - each tab will need us to discard changes or save them, rather than simply having a big "revert" button
+- check window memory management
+- decide on preferences. What is a better layout to mark the computer stolen?
 
 
 GENERAL:
@@ -36,6 +38,13 @@ INSTALLATION AND PACKAGING:
 - Write uninstallation processes in README
 
 DAEMON:
+- WHEN STOLEN, THE DAEMON WILL
+	* start to log the location
+	* take photos every 10 minutes
+- each messing service can decide to
+	* transmit each photo
+	* transmit each change in location
+	* periodically
 
 Photo - how to take. How to send to Twitter. http://mashable.com/2009/05/19/twitter-share-images/
 Logging - How to send to me?

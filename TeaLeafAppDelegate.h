@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <BWToolkitFramework/BWToolkitFramework.h>
 @class ManagingServiceConfigController;
+@class PreferencesController;
 
 
 @interface TeaLeafAppDelegate : NSObject <NSApplicationDelegate> {
@@ -30,10 +31,13 @@
 	
 	// controllers
 	//NSArrayController *arrayController;
+	PreferencesController *preferencesController;
+	
 	
 	// configuration data etc
-	NSArray			*serviceTypes;			// loaded from plist
-	NSMutableArray	*serviceConfigControllers;
+	NSArray				*serviceTypes;				// loaded from plist
+	NSMutableArray		*serviceConfigControllers;
+	NSMutableDictionary *preferencesDictionary; // store the prefs - bound to the equiv. in the prefs Controller.
 //	NSArray			*messagingConfig;	
 //	ManagingServiceConfigController *currentConfigController;  // just point to the currently selected in the array
 	
@@ -50,21 +54,25 @@
 
 -(IBAction)close:(NSButton *)sender;
 
+-(IBAction)showPreferences:(id)sender;
 
 
-@property (assign) IBOutlet NSWindow		*window;
-@property (assign) IBOutlet NSBox			*viewBox;
-@property (assign) IBOutlet BWAnchoredButton *removeButton;
-@property (assign) IBOutlet NSButton		*daemonStartButton;
-@property (assign) IBOutlet NSWindow		*newConfigViewSheet;
-@property (assign) IBOutlet NSPopUpButton	*serviceTypePopup;
-@property (assign) IBOutlet NSTextField		*serviceNameField;
-@property (assign) IBOutlet NSTableView		*servicesTable;
+
+@property (assign, nonatomic) IBOutlet NSWindow		*window;
+@property (assign, nonatomic) IBOutlet NSBox			*viewBox;
+@property (assign, nonatomic) IBOutlet BWAnchoredButton *removeButton;
+@property (assign, nonatomic) IBOutlet NSButton		*daemonStartButton;
+@property (assign, nonatomic) IBOutlet NSWindow		*newConfigViewSheet;
+@property (assign, nonatomic) IBOutlet NSPopUpButton	*serviceTypePopup;
+@property (assign, nonatomic) IBOutlet NSTextField		*serviceNameField;
+@property (assign, nonatomic) IBOutlet NSTableView		*servicesTable;
 
 //@property (assign) IBOutlet NSArrayController *arrayController;
-
-@property (copy, nonatomic) NSArray			*serviceTypes;
-@property (retain, nonatomic) NSMutableArray  *serviceConfigControllers;  // cannot use copy on mutable object
+@property (retain, nonatomic) PreferencesController *preferencesController;
+	
+@property (copy, nonatomic)		NSArray				*serviceTypes;
+@property (retain, nonatomic)	NSMutableArray		*serviceConfigControllers;  // cannot use copy on mutable object
+@property (retain, nonatomic)	NSMutableDictionary *preferencesDictionary;
 //@property (copy, nonatomic) NSArray		    *messagingConfig;	
 //@property (assign, nonatomic) ManagingServiceConfigController *currentConfigController;
 

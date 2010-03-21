@@ -13,6 +13,8 @@
 		7D1DD71A114D235E00FE9FA3 /* FileServiceConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DD719114D235E00FE9FA3 /* FileServiceConfigController.m */; };
 		7D1DD763114D76B600FE9FA3 /* daemon_started.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD761114D76B600FE9FA3 /* daemon_started.png */; };
 		7D1DD764114D76B600FE9FA3 /* daemon_stopped.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD762114D76B600FE9FA3 /* daemon_stopped.png */; };
+		7D2B51A71156762C00A68F2E /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B51A61156762C00A68F2E /* PreferencesController.m */; };
+		7D2B51A91156767200A68F2E /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2B51A81156767200A68F2E /* Preferences.xib */; };
 		7D31D11E10F9DB7000DAFC6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */; };
 		7D3F68B11155263100008258 /* TwitterServiceConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F68AF1155263100008258 /* TwitterServiceConfigController.m */; };
 		7D3F68B21155263100008258 /* TwitterServiceConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F68B01155263100008258 /* TwitterServiceConfigView.xib */; };
@@ -54,6 +56,9 @@
 		7D1DD719114D235E00FE9FA3 /* FileServiceConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileServiceConfigController.m; sourceTree = "<group>"; };
 		7D1DD761114D76B600FE9FA3 /* daemon_started.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daemon_started.png; sourceTree = "<group>"; };
 		7D1DD762114D76B600FE9FA3 /* daemon_stopped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daemon_stopped.png; sourceTree = "<group>"; };
+		7D2B51A51156762C00A68F2E /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		7D2B51A61156762C00A68F2E /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		7D2B51A81156767200A68F2E /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		7D31D0FC10F9D70000DAFC6F /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		7D31D0FD10F9D70000DAFC6F /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 		7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
@@ -113,7 +118,7 @@
 		7D4AB4981150C77D00C14940 /* ServiceTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceTypes.plist; sourceTree = "<group>"; };
 		7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/rbt/Development/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
 		7DFECCCA1142A83500AA2151 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
-		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = TODO; sourceTree = "<group>"; };
 		7DFECCD51142AA0500AA2151 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7DFECCD61142AADA00AA2151 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TeaLeaf-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TeaLeaf-Info.plist"; sourceTree = "<group>"; };
@@ -224,14 +229,16 @@
 			name = File;
 			sourceTree = "<group>";
 		};
-		7D1DD712114D21B300FE9FA3 /* Main Menu */ = {
+		7D1DD712114D21B300FE9FA3 /* Main Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7D1DD75C114D729C00FE9FA3 /* Resources */,
 				256AC3D90F4B6AC300CF3369 /* TeaLeafAppDelegate.m */,
 				256AC3D80F4B6AC300CF3369 /* TeaLeafAppDelegate.h */,
+				7D2B51A51156762C00A68F2E /* PreferencesController.h */,
+				7D2B51A61156762C00A68F2E /* PreferencesController.m */,
+				7D1DD75C114D729C00FE9FA3 /* Resources */,
 			);
-			name = "Main Menu";
+			name = "Main Controllers";
 			sourceTree = "<group>";
 		};
 		7D1DD75C114D729C00FE9FA3 /* Resources */ = {
@@ -243,6 +250,7 @@
 				8D1107310486CEB800E47090 /* TeaLeaf-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				7D4AB4981150C77D00C14940 /* ServiceTypes.plist */,
+				7D2B51A81156767200A68F2E /* Preferences.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -250,7 +258,7 @@
 		7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config App */ = {
 			isa = PBXGroup;
 			children = (
-				7D1DD712114D21B300FE9FA3 /* Main Menu */,
+				7D1DD712114D21B300FE9FA3 /* Main Controllers */,
 				7D1DD707114D0CEC00FE9FA3 /* Config Views */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 			);
@@ -415,6 +423,7 @@
 				7D1DD764114D76B600FE9FA3 /* daemon_stopped.png in Resources */,
 				7D4AB4991150C77D00C14940 /* ServiceTypes.plist in Resources */,
 				7D3F68B21155263100008258 /* TwitterServiceConfigView.xib in Resources */,
+				7D2B51A91156767200A68F2E /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +439,7 @@
 				7D1DD71A114D235E00FE9FA3 /* FileServiceConfigController.m in Sources */,
 				7D0E04C71153B153007C3CFE /* ManagingServiceConfigController.m in Sources */,
 				7D3F68B11155263100008258 /* TwitterServiceConfigController.m in Sources */,
+				7D2B51A71156762C00A68F2E /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
