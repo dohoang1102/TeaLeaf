@@ -13,11 +13,12 @@
 
 @interface TeaLeafAppDelegate(PrivateMethods)
 
--(void)createServiceConfigView:(NSString *) serviceName type:(NSString *)type;
+-(void)createServiceConfigView:(NSString *) serviceName type:(NSString *)type config:(NSMutableDictionary *)configDict;
 -(void)destroyServiceConfigView:(NSUInteger)index;
 -(void)displayViewController:(ManagingServiceConfigController*)viewController;
--(void)dumpDictionaryOfCurrentlySelectedController;
-
+-(NSURL *)configurationDirectoryURL;
+-(NSURL *)configurationFileURL;
+-(void)writeConfigurationToFile;
 
 @end
 
@@ -28,7 +29,7 @@
 @synthesize daemonStartButton;
 @synthesize viewBox;
 @synthesize serviceConfigControllers;
-@synthesize messagingConfig;
+//@synthesize messagingConfig;
 @synthesize servicesTable;
 @synthesize removeButton;
 @synthesize newConfigViewSheet;
@@ -36,7 +37,7 @@
 @synthesize serviceNameField;
 //@synthesize arrayController;
 @synthesize serviceTypes;
-@synthesize currentConfigController;
+//@synthesize currentConfigController;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -58,16 +59,30 @@
 			   name:NSTableViewSelectionDidChangeNotification
 			 object:nil];
 	
-	// read configuration from the MessagingConfig.plist file into the messagingConfig array
+	// read configuration from the MessagingConfig.plist
+	NSArray *configArray = [NSArray arrayWithContentsOfURL:[self configurationFileURL]];
+	//NSLog(@"loaded array:%@", configArray);
 	
-	// loop this array. Instantiate a viewCntroller of the correct type,
-	// from the config, we set the config dictionary
-	// and display it in the box
+	// loop this array. Instantiate viewControllers of the correct type,
+	NSString *serviceType;
+	NSString *serviceName;
+	for (NSDictionary *d in configArray)
+	{
+		serviceName = [d objectForKey:@"serviceName"];
+		serviceType = [d objectForKey:@"serviceType"];
+		
+		//TODO: May need to change this as it reloads table view each time
+		[self createServiceConfigView:serviceName type:serviceType config:d];
+		
+	}
 	
 }
 
 -(void)applicationWillTerminate:(NSNotification *)notification
 {
+	// write to file
+	[self writeConfigurationToFile];
+	
 	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 	[nc removeObserver:self];
 	self.serviceTypes = nil;
@@ -101,7 +116,8 @@
 	
 	if ([[whichButton title] isEqualToString:@"Create"]) {
 		[self createServiceConfigView:[self.serviceNameField stringValue] 
-								 type:[self.serviceTypePopup titleOfSelectedItem]]; 
+								 type:[self.serviceTypePopup titleOfSelectedItem] 
+							   config:nil]; 
 	} 
 	else if ([[whichButton title] isEqualToString:@"Cancel"]) {
 			NSLog(@"Cancel button pressed from sheet");
@@ -162,7 +178,7 @@
 
 -(IBAction)apply:(id)sender
 {
-	[self dumpDictionaryOfCurrentlySelectedController];
+	[self writeConfigurationToFile];
 	// save changes to config file
 }
 
@@ -192,7 +208,7 @@
 } 
 
 #pragma mark NSApplication delegate methods
-
+//TODO: this work, but when the last windo is close, it does not call the applicationWillTerminate
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)app
 {
 	return YES;
@@ -201,7 +217,9 @@
 #pragma mark NSApplication private methods
 
 // instantiates a new view controller and puts in into the array iVar
--(void)createServiceConfigView:(NSString *) serviceName type:(NSString *)type
+// if a config Dictionary is passed, then initilize with it. otherwise (nill passwd)
+// we just set the name.
+-(void)createServiceConfigView:(NSString *) serviceName type:(NSString *)type config:(NSMutableDictionary *)configDict 
 {
 	
 	// if service type = '`type', then the class name is 'TypeServiceConfigController'
@@ -213,7 +231,14 @@
 	ManagingServiceConfigController *vc = [[vcClass alloc] init];
 	
 	//TODO: error check	
-	vc.serviceName = serviceName;
+	// Initialise with ready made confif if we have some. otherwise, just set the name.
+	
+	if (configDict) {
+		vc.configDictionary = configDict;
+	} else {
+		vc.serviceName = serviceName;
+	}
+
 		
 	// put it into the array
 	[self.serviceConfigControllers addObject:vc];
@@ -255,16 +280,74 @@
 	[self.viewBox setContentView:view];
 	
 	// set the currentclyViewController iVar	
-	self.currentConfigController = viewController;
+	//self.currentConfigController = viewController;
 
 }
-// for debug - dumps the config dict of the currently selected controller view;
 
--(void)dumpDictionaryOfCurrentlySelectedController
+
+-(void)writeConfigurationToFile
 {
-	NSDictionary *c = self.currentConfigController.configDictionary;
-	NSLog(@"currentConfigDictionary:%@", c);
+	//NSURL *configFile = [self configurationFileURL];
 	
+	// construct an array of all the config dictionaries
+	NSMutableArray *configArray = [NSMutableArray arrayWithCapacity:[self.serviceConfigControllers count]];
+	for (ManagingServiceConfigController *c in self.serviceConfigControllers)
+	{
+		[configArray addObject:c.configDictionary];
+	}
+	
+	//TODO: check return values and throwe error if NO 
+	
+	BOOL success = [configArray writeToURL:[self configurationFileURL] atomically:YES];
+	if (success) {
+		NSLog(@"App configuration written to :%@", [[self configurationFileURL] path]);
+	}
+	else {
+		NSLog(@"error writing config file");
+	}
+
 	
 }
+
+// returns a URL of the configuration directory
+-(NSURL *)configurationDirectoryURL
+{
+	NSFileManager *fm = [NSFileManager defaultManager];	
+	
+	// Get application support directory
+	NSURL *URL =  [fm URLForDirectory:NSApplicationSupportDirectory 
+							 inDomain:NSLocalDomainMask
+					appropriateForURL:nil
+							   create:NO
+								error:NULL];
+	
+	
+	// Add the application specifion file component, and the file name
+	URL = [URL URLByAppendingPathComponent:@"TeaLeaf"];
+	NSString *path = [URL path];
+	
+	if (![fm fileExistsAtPath:path]) 
+	{
+		// Create it
+		NSError *error;
+		//TODO:  Errorcheck should throw an alert box
+		if (![fm createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error ]) 
+		{
+			NSLog(@"Failed to create app support directory:%@", error);
+			
+		}
+	}
+	
+	
+	return URL;
+}
+
+// returns a URL of the configuration file
+-(NSURL *)configurationFileURL
+{
+	NSURL *URL = [[self configurationDirectoryURL] URLByAppendingPathComponent:@"TeaLeaf.plist"];
+	
+	return URL;
+}
+
 @end

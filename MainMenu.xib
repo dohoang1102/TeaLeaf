@@ -11,7 +11,6 @@
 			<string key="com.brandonwalkin.BWToolkit">1.2.5</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="876"/>
 			<integer value="29"/>
 			<integer value="967"/>
 		</array>
@@ -1269,7 +1268,7 @@
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<object class="NSView" key="NSWindowView" id="414427165">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="BWAnchoredButtonBar" id="698341334">
@@ -1519,7 +1518,6 @@
 									</array>
 									<string key="NSFrame">{{1, 1}, {178, 434}}</string>
 									<reference key="NSSuperview" ref="306543062"/>
-									<reference key="NSNextKeyView" ref="216212824"/>
 									<reference key="NSDocView" ref="216212824"/>
 									<reference key="NSBGColor" ref="868411616"/>
 									<int key="NScvFlags">4</int>
@@ -1547,22 +1545,21 @@
 							</array>
 							<string key="NSFrame">{{20, 83}, {180, 436}}</string>
 							<reference key="NSSuperview" ref="414427165"/>
-							<reference key="NSNextKeyView" ref="382734194"/>
 							<int key="NSsFlags">546</int>
 							<reference key="NSVScroller" ref="302718731"/>
 							<reference key="NSHScroller" ref="10181553"/>
 							<reference key="NSContentView" ref="382734194"/>
 							<bytes key="NSScrollAmts">QSAAAEEgAABBmAAAQZgAAA</bytes>
 						</object>
-						<object class="NSBox" id="270500851">
+						<object class="NSBox" id="1061651841">
 							<reference key="NSNextResponder" ref="414427165"/>
 							<int key="NSvFlags">12</int>
 							<array class="NSMutableArray" key="NSSubviews">
-								<object class="NSView" id="986037960">
-									<reference key="NSNextResponder" ref="270500851"/>
+								<object class="NSView" id="619418693">
+									<reference key="NSNextResponder" ref="1061651841"/>
 									<int key="NSvFlags">256</int>
 									<string key="NSFrame">{{1, 1}, {618, 462}}</string>
-									<reference key="NSSuperview" ref="270500851"/>
+									<reference key="NSSuperview" ref="1061651841"/>
 								</object>
 							</array>
 							<string key="NSFrame">{{205, 56}, {620, 478}}</string>
@@ -1584,7 +1581,7 @@
 									<bytes key="NSWhite">MCAwLjgwMDAwMDAxMTkAA</bytes>
 								</object>
 							</object>
-							<reference key="NSContentView" ref="986037960"/>
+							<reference key="NSContentView" ref="619418693"/>
 							<int key="NSBorderType">1</int>
 							<int key="NSBoxType">0</int>
 							<int key="NSTitlePosition">2</int>
@@ -1592,7 +1589,6 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{842, 540}</string>
-					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
@@ -1655,7 +1651,11 @@
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
 								<string key="NSContents">Select the type of service and give it a unique name.</string>
-								<reference key="NSSupport" ref="236184190"/>
+								<object class="NSFont" key="NSSupport">
+									<string key="NSName">LucidaGrande</string>
+									<double key="NSSize">12</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<reference key="NSControlView" ref="306155997"/>
 								<reference key="NSBackgroundColor" ref="545157808"/>
 								<reference key="NSTextColor" ref="324619319"/>
@@ -2594,7 +2594,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">viewBox</string>
 						<reference key="source" ref="941536864"/>
-						<reference key="destination" ref="270500851"/>
+						<reference key="destination" ref="1061651841"/>
 					</object>
 					<int key="connectionID">1040</int>
 				</object>
@@ -2920,7 +2920,7 @@
 							<reference ref="69452616"/>
 							<reference ref="521144895"/>
 							<reference ref="698341334"/>
-							<reference ref="270500851"/>
+							<reference ref="1061651841"/>
 						</array>
 						<reference key="parent" ref="513744381"/>
 					</object>
@@ -3884,7 +3884,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1039</int>
-						<reference key="object" ref="270500851"/>
+						<reference key="object" ref="1061651841"/>
 						<reference key="parent" ref="414427165"/>
 					</object>
 				</array>

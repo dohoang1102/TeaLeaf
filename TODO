@@ -1,31 +1,41 @@
 Lots!
 
 Immediate TODO items
-* TableView focus ring bottom side near BWtoolkit widgets not visible (removed for now)
+
+CONFIG APPLICATION:
+- resolve issue with TableView focus ring bottom side near BWtoolkit widgets not visible (removed for now)
+- Complete error checking in App Delegate
+- Config file and application support directory needs to be root owned and perms 700
+- Write Start / Stop Daemon routines
+- Design and embed icon
+- Remove embedded key strings where there should be constants
+- convert user displayed strings to localised strings
+- Customise about box
+- Undo functionality (can set the change flag manually)
+- Change font size for infomational labels where appropriate
+- Add formatter to various entry fields to lomit field sizes
+- Configure menu items
+- menu item to save copies of current config (save / load menu items
+- help sheet on first launch
+- some more descriptive texts on table view
+- boilerplate defaults
+- use coredata to store the config bevuase it may well change and we will need to migrate it
+- look at espionage for changes to user interface that look cooler. icons next to each service name, for example.
+-		and and enabled or on/off button.
+- each tab will need us to discard changes or save them, rather than simply having a big "revert" button
 
 
+GENERAL:
+- Write proper README file
 
 
+INSTALLATION AND PACKAGING:
+- Write PackageMaker
+- Develop build routines 
+- Add sparkle
+- Write uninstallation processes in README
 
-
-
-
-
-
-*Needs a proper design
-*Customise about box
-*icons
-*versioning
-*fininsh todo file
-*Readme text
-
-nstallation
-Icons
-Packaging
-Licenses
-Launchd configuraton
-Uninstallation
-SCM - open google code project
+DAEMON:
 
 Photo - how to take. How to send to Twitter. http://mashable.com/2009/05/19/twitter-share-images/
 Logging - How to send to me?
@@ -33,7 +43,7 @@ How to disable the machine? Delete partition table? How can we test this?
 
 
 Need to store last direct message received. Do this reliably.
-Permissions - running as root.
+
 encrypting the config file.
 Integration with CoreLocation
 
@@ -66,6 +76,3 @@ config:
 		last direct message received
 		
 
-Other cool things to do.
-	email support
-	remove 

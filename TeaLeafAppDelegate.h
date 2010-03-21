@@ -34,8 +34,8 @@
 	// configuration data etc
 	NSArray			*serviceTypes;			// loaded from plist
 	NSMutableArray	*serviceConfigControllers;
-	NSArray			*messagingConfig;	
-	ManagingServiceConfigController *currentConfigController;  // just point to the currently selected in the array
+//	NSArray			*messagingConfig;	
+//	ManagingServiceConfigController *currentConfigController;  // just point to the currently selected in the array
 	
 	
 }
@@ -65,8 +65,8 @@
 
 @property (copy, nonatomic) NSArray			*serviceTypes;
 @property (retain, nonatomic) NSMutableArray  *serviceConfigControllers;  // cannot use copy on mutable object
-@property (copy, nonatomic) NSArray		    *messagingConfig;	
-@property (assign, nonatomic) ManagingServiceConfigController *currentConfigController;
+//@property (copy, nonatomic) NSArray		    *messagingConfig;	
+//@property (assign, nonatomic) ManagingServiceConfigController *currentConfigController;
 
 
 @end
