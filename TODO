@@ -38,50 +38,7 @@ INSTALLATION AND PACKAGING:
 - Write uninstallation processes in README
 
 DAEMON:
-- WHEN STOLEN, THE DAEMON WILL
-	* start to log the location
-	* take photos every 10 minutes
-- each messing service can decide to
-	* transmit each photo
-	* transmit each change in location
-	* periodically
-
-Photo - how to take. How to send to Twitter. http://mashable.com/2009/05/19/twitter-share-images/
-Logging - How to send to me?
-How to disable the machine? Delete partition table? How can we test this?
 
 
-Need to store last direct message received. Do this reliably.
-
-encrypting the config file.
-Integration with CoreLocation
-
-What if it fails? How will the user know? Config program needs ramping up.
-
-The Config tool needs much more work. Needs a passphrase
-
-Design elements:
-We should check twitter for direct messages when:
-	External IP address changes
-	Location Changes (from Core Location)
-	At a time Interval (in hours)
-	When 
-
-config:
-	Global Behaviour:
-		twitter uid / password
-		When to check for direct messages:
-			time interval [xx]hours
-			on change of location? []
-			on external ip changing? []
-		direct message password ["sadsdsds"]
-	Behaviour when marked stolen:
-		take pics?
-			How often?
-			twitter them back?	
-		twitter location?
-			How often?	
-	RunTime persistent state
-		last direct message received
-		
+Deasign Notes:
 
