@@ -7,10 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ManagingServiceConfigController.h";
+#import "ServiceConfigController.h";
 
 
-@interface FileServiceConfigController : ManagingServiceConfigController {
+@interface FileServiceConfigController : ServiceConfigController {
 
 
 }

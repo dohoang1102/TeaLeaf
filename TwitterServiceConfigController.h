@@ -10,7 +10,7 @@
 #import "ManagingServiceConfigController.h";
 
 
-@interface TwitterServiceConfigController : ManagingServiceConfigController {
+@interface TwitterServiceConfigController : ServiceConfigController {
 
 }
 

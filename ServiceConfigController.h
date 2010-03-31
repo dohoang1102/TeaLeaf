@@ -1,5 +1,5 @@
 //
-//  ManagingServiceConfigController.h
+//  ServiceConfigController.h
 //  TeaLeaf
 //
 //  Created by Richard Turnbull on 19/03/2010.
@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface ManagingServiceConfigController : NSViewController {
+@interface ServiceConfigController : NSViewController {
 
 	NSMutableDictionary *configDictionary;
 

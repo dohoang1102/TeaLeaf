@@ -1,17 +1,17 @@
 //
-//  ManagingServiceConfigController.m
+//  ServiceConfigController.m
 //  TeaLeaf
 //
 //  Created by Richard Turnbull on 19/03/2010.
 //  Copyright 2010 2010 Swandrift Consulting Limited. All rights reserved.
 //
 
-#import "ManagingServiceConfigController.h"
+#import "ServiceConfigController.h"
 
 static NSString * const serviceNameKey = @"serviceName"; 
 static NSString * const serviceTypeKey = @"serviceType"; 
 
-@implementation ManagingServiceConfigController
+@implementation ServiceConfigController
 
 @synthesize configDictionary;
 @dynamic	serviceName, serviceType;
@@ -24,6 +24,12 @@ static NSString * const serviceTypeKey = @"serviceType";
 	self.configDictionary = [NSMutableDictionary dictionaryWithCapacity:1];
 	
 	return self;
+}
+
+-(id)init
+{
+	NSLog(@"init needs to be overidden in a subclass. return nil");
+	return nil;
 }
 
 -(void)dealloc
