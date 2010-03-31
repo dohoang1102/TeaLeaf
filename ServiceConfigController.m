@@ -7,9 +7,7 @@
 //
 
 #import "ServiceConfigController.h"
-
-static NSString * const serviceNameKey = @"serviceName"; 
-static NSString * const serviceTypeKey = @"serviceType"; 
+#import "Globals.h"
 
 @implementation ServiceConfigController
 
