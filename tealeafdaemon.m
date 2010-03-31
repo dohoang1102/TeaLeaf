@@ -14,13 +14,13 @@ int main (int argc, const char * argv[])
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	// Start a Controller
-	DaemonController *controller = [[DaemonController alloc] init];
-	[controller configure];
-	[controller run];
+	//DaemonController *controller = [[DaemonController alloc] init];
+	//[controller configure];
+	//[controller run];
 	
-	[controller dealloc];
+	//[controller dealloc];
 	
-	NSLog(@"exiting");
+	//NSLog(@"exiting");
 	
 	
 	[pool release];

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		256AC3DA0F4B6AC300CF3369 /* TeaLeafAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* TeaLeafAppDelegate.m */; };
-		7D0E04C71153B153007C3CFE /* ManagingServiceConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0E04C61153B153007C3CFE /* ManagingServiceConfigController.m */; };
+		7D0E04C71153B153007C3CFE /* ServiceConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0E04C61153B153007C3CFE /* ServiceConfigController.m */; };
 		7D1DD717114D230C00FE9FA3 /* FileServiceConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD716114D230C00FE9FA3 /* FileServiceConfigView.xib */; };
 		7D1DD71A114D235E00FE9FA3 /* FileServiceConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DD719114D235E00FE9FA3 /* FileServiceConfigController.m */; };
 		7D1DD763114D76B600FE9FA3 /* daemon_started.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1DD761114D76B600FE9FA3 /* daemon_started.png */; };
@@ -21,6 +21,9 @@
 		7D4AB4991150C77D00C14940 /* ServiceTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4AB4981150C77D00C14940 /* ServiceTypes.plist */; };
 		7D4AB4DA115106F300C14940 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */; };
 		7D4AB5101151075E00C14940 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */; };
+		7DA93C061163BCF400323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
+		7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
+		7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -49,8 +52,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		7D0E04C51153B153007C3CFE /* ManagingServiceConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagingServiceConfigController.h; sourceTree = "<group>"; };
-		7D0E04C61153B153007C3CFE /* ManagingServiceConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagingServiceConfigController.m; sourceTree = "<group>"; };
+		7D0E04C51153B153007C3CFE /* ServiceConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceConfigController.h; sourceTree = "<group>"; };
+		7D0E04C61153B153007C3CFE /* ServiceConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceConfigController.m; sourceTree = "<group>"; };
 		7D1DD716114D230C00FE9FA3 /* FileServiceConfigView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileServiceConfigView.xib; sourceTree = "<group>"; };
 		7D1DD718114D235E00FE9FA3 /* FileServiceConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileServiceConfigController.h; sourceTree = "<group>"; };
 		7D1DD719114D235E00FE9FA3 /* FileServiceConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileServiceConfigController.m; sourceTree = "<group>"; };
@@ -116,6 +119,11 @@
 		7D4AB4981150C77D00C14940 /* ServiceTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceTypes.plist; sourceTree = "<group>"; };
 		7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/rbt/Development/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
 		7D5D4A8011627D8C0087B95A /* Class Diagram.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Class Diagram.pdf"; sourceTree = "<group>"; };
+		7DA93C041163BCF400323BF3 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
+		7DA93C051163BCF400323BF3 /* MessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingService.m; sourceTree = "<group>"; };
+		7DA93C071163BDCD00323BF3 /* FileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMessagingService.h; sourceTree = "<group>"; };
+		7DA93C081163BDCD00323BF3 /* FileMessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMessagingService.m; sourceTree = "<group>"; };
+		7DA93C211163BE4200323BF3 /* uk.co.swandrift.tealeaf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = uk.co.swandrift.tealeaf; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFECCCA1142A83500AA2151 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
 		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = TODO; sourceTree = "<group>"; };
 		7DFECCD51142AA0500AA2151 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -125,6 +133,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7DA93C1F1163BE4200323BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* TeaLeaf.app */,
+				7DA93C211163BE4200323BF3 /* uk.co.swandrift.tealeaf */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,8 +217,8 @@
 		7D1DD707114D0CEC00FE9FA3 /* Config Views */ = {
 			isa = PBXGroup;
 			children = (
-				7D0E04C51153B153007C3CFE /* ManagingServiceConfigController.h */,
-				7D0E04C61153B153007C3CFE /* ManagingServiceConfigController.m */,
+				7D0E04C51153B153007C3CFE /* ServiceConfigController.h */,
+				7D0E04C61153B153007C3CFE /* ServiceConfigController.m */,
 				7D1DD70B114D213400FE9FA3 /* File */,
 				7D1DD708114D0CFA00FE9FA3 /* Twitter */,
 			);
@@ -268,7 +284,6 @@
 		7D31D0F410F9D6DB00DAFC6F /* Archive for Now */ = {
 			isa = PBXGroup;
 			children = (
-				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
 				7D31D23210F9FD5B00DAFC6F /* DaemonController.h */,
 				7D31D23310F9FD5B00DAFC6F /* DaemonController.m */,
 				7D31D1E310F9FBFA00DAFC6F /* MGTwitterEngine */,
@@ -281,6 +296,7 @@
 		7D31D1DA10F9FB2700DAFC6F /* Daemon */ = {
 			isa = PBXGroup;
 			children = (
+				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
 				7D5D4A9311627F290087B95A /* Messaging */,
 			);
 			name = Daemon;
@@ -374,6 +390,10 @@
 		7D5D4A9311627F290087B95A /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
+				7DA93C041163BCF400323BF3 /* MessagingService.h */,
+				7DA93C051163BCF400323BF3 /* MessagingService.m */,
+				7DA93C071163BDCD00323BF3 /* FileMessagingService.h */,
+				7DA93C081163BDCD00323BF3 /* FileMessagingService.m */,
 			);
 			name = Messaging;
 			sourceTree = "<group>";
@@ -381,6 +401,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7DA93C201163BE4200323BF3 /* uk.co.swandrift.tealeaf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DA93C251163BE6300323BF3 /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */;
+			buildPhases = (
+				7DA93C1E1163BE4200323BF3 /* Sources */,
+				7DA93C1F1163BE4200323BF3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uk.co.swandrift.tealeaf;
+			productName = uk.co.swandrift.tealeaf;
+			productReference = 7DA93C211163BE4200323BF3 /* uk.co.swandrift.tealeaf */;
+			productType = "com.apple.product-type.tool";
+		};
 		8D1107260486CEB800E47090 /* TeaLeaf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TeaLeaf" */;
@@ -413,6 +449,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* TeaLeaf */,
+				7DA93C201163BE4200323BF3 /* uk.co.swandrift.tealeaf */,
 			);
 		};
 /* End PBXProject section */
@@ -436,6 +473,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7DA93C1E1163BE4200323BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */,
+				7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,9 +489,10 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* TeaLeafAppDelegate.m in Sources */,
 				7D1DD71A114D235E00FE9FA3 /* FileServiceConfigController.m in Sources */,
-				7D0E04C71153B153007C3CFE /* ManagingServiceConfigController.m in Sources */,
+				7D0E04C71153B153007C3CFE /* ServiceConfigController.m in Sources */,
 				7D3F68B11155263100008258 /* TwitterServiceConfigController.m in Sources */,
 				7D2B51A71156762C00A68F2E /* PreferencesController.m in Sources */,
+				7DA93C061163BCF400323BF3 /* MessagingService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +510,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7DA93C231163BE4500323BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = uk.co.swandrift.tealeaf;
+			};
+			name = Debug;
+		};
+		7DA93C241163BE4500323BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = uk.co.swandrift.tealeaf;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -537,6 +630,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7DA93C251163BE6300323BF3 /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DA93C231163BE4500323BF3 /* Debug */,
+				7DA93C241163BE4500323BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TeaLeaf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
