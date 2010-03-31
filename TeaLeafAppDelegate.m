@@ -7,7 +7,7 @@
 //
 
 #import "TeaLeafAppDelegate.h"
-#import "ManagingServiceConfigController.h"
+#import "ServiceConfigController.h"
 #import	"PreferencesController.h"
 
 
@@ -255,7 +255,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 
 	Class vcClass = NSClassFromString(viewControllerName);
 	
-	ManagingServiceConfigController *vc = [[vcClass alloc] init];
+	ServiceConfigController *vc = [[vcClass alloc] init];
 	
 	//TODO: error check	
 	// Initialise with ready made confif if we have some. otherwise, just set the name.
@@ -389,7 +389,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	
 	// construct an array of all the config dictionaries
 	NSMutableArray *configArray = [NSMutableArray arrayWithCapacity:[self.serviceConfigControllers count]];
-	for (ManagingServiceConfigController *c in self.serviceConfigControllers)
+	for (ServiceConfigController *c in self.serviceConfigControllers)
 	{
 		[configArray addObject:c.configDictionary];
 	}

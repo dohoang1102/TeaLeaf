@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ManagingServiceConfigController.h";
+#import "ServiceConfigController.h";
 
 
 @interface TwitterServiceConfigController : ServiceConfigController {
