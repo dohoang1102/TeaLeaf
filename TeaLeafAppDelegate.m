@@ -317,7 +317,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	[self readMessagingConfig];
 }
 
-//TODO: This needs reading from a plist
+//TODO: This needs reading from a plist in the app main bundle
 -(NSMutableDictionary *)defaultPreferences
 {
 	

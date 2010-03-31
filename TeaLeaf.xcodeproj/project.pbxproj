@@ -62,8 +62,6 @@
 		7D31D0FC10F9D70000DAFC6F /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		7D31D0FD10F9D70000DAFC6F /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 		7D31D11D10F9DB7000DAFC6F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		7D31D12810F9DC0F00DAFC6F /* ConfigurationFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationFileManager.h; sourceTree = "<group>"; };
-		7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationFileManager.m; sourceTree = "<group>"; };
 		7D31D1E510F9FBFA00DAFC6F /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		7D31D1E610F9FBFA00DAFC6F /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
 		7D31D1E710F9FBFA00DAFC6F /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -117,6 +115,7 @@
 		7D3F68B01155263100008258 /* TwitterServiceConfigView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterServiceConfigView.xib; sourceTree = "<group>"; };
 		7D4AB4981150C77D00C14940 /* ServiceTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceTypes.plist; sourceTree = "<group>"; };
 		7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/rbt/Development/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
+		7D5D4A8011627D8C0087B95A /* Class Diagram.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Class Diagram.pdf"; sourceTree = "<group>"; };
 		7DFECCCA1142A83500AA2151 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
 		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = TODO; sourceTree = "<group>"; };
 		7DFECCD51142AA0500AA2151 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 				7D31D1DA10F9FB2700DAFC6F /* Daemon */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				7D5D4A8011627D8C0087B95A /* Class Diagram.pdf */,
 				7DFECCD41142A9D000AA2151 /* TODO */,
 				7DFECCD51142AA0500AA2151 /* LICENSE */,
 				7DFECCD61142AADA00AA2151 /* README */,
@@ -268,9 +268,10 @@
 		7D31D0F410F9D6DB00DAFC6F /* Archive for Now */ = {
 			isa = PBXGroup;
 			children = (
+				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
+				7D31D23210F9FD5B00DAFC6F /* DaemonController.h */,
+				7D31D23310F9FD5B00DAFC6F /* DaemonController.m */,
 				7D31D1E310F9FBFA00DAFC6F /* MGTwitterEngine */,
-				7D31D12810F9DC0F00DAFC6F /* ConfigurationFileManager.h */,
-				7D31D12910F9DC0F00DAFC6F /* ConfigurationFileManager.m */,
 				7D31D0FC10F9D70000DAFC6F /* Globals.h */,
 				7D31D0FD10F9D70000DAFC6F /* Globals.m */,
 			);
@@ -280,9 +281,7 @@
 		7D31D1DA10F9FB2700DAFC6F /* Daemon */ = {
 			isa = PBXGroup;
 			children = (
-				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
-				7D31D23210F9FD5B00DAFC6F /* DaemonController.h */,
-				7D31D23310F9FD5B00DAFC6F /* DaemonController.m */,
+				7D5D4A9311627F290087B95A /* Messaging */,
 			);
 			name = Daemon;
 			sourceTree = "<group>";
@@ -370,6 +369,13 @@
 				7D31D20B10F9FBFB00DAFC6F /* MGTwitterMiscLibXMLParser.m */,
 			);
 			name = "Twitter LibXML Parsers";
+			sourceTree = "<group>";
+		};
+		7D5D4A9311627F290087B95A /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Messaging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
