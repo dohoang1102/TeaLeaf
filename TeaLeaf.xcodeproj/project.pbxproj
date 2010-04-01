@@ -28,6 +28,7 @@
 		7DA93C061163BCF400323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
+		7DA93C70116479CB00323BF3 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C6F116479CB00323BF3 /* MainController.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -83,6 +84,9 @@
 		7DA93C071163BDCD00323BF3 /* FileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMessagingService.h; sourceTree = "<group>"; };
 		7DA93C081163BDCD00323BF3 /* FileMessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMessagingService.m; sourceTree = "<group>"; };
 		7DA93C211163BE4200323BF3 /* uk.co.swandrift.tealeaf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = uk.co.swandrift.tealeaf; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA93C6E116479CB00323BF3 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		7DA93C6F116479CB00323BF3 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		7DA93C7A1164804400323BF3 /* MessagingServicesManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingServicesManagerDelegate.h; sourceTree = "<group>"; };
 		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = TODO; sourceTree = "<group>"; };
 		7DFECCD51142AA0500AA2151 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7DFECCD61142AADA00AA2151 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
+				7DA93C6E116479CB00323BF3 /* MainController.h */,
+				7DA93C6F116479CB00323BF3 /* MainController.m */,
 				7D5D4A9311627F290087B95A /* Messaging */,
 			);
 			name = Daemon;
@@ -257,6 +263,7 @@
 				7DA93C071163BDCD00323BF3 /* FileMessagingService.h */,
 				7DA93C081163BDCD00323BF3 /* FileMessagingService.m */,
 				7D5D4AE41163D3E20087B95A /* MessagingServicesManager.h */,
+				7DA93C7A1164804400323BF3 /* MessagingServicesManagerDelegate.h */,
 				7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */,
 			);
 			name = Messaging;
@@ -346,6 +353,7 @@
 				7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */,
 				7D5D4AE31163D2920087B95A /* FileMessagingService.m in Sources */,
 				7D5D4AE61163D3E20087B95A /* MessagingServicesManager.m in Sources */,
+				7DA93C70116479CB00323BF3 /* MainController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
