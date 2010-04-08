@@ -12,29 +12,25 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class MessagingService;
+#import "MessagingServicesManagerDelegate.h"
 
+@class MessagingService;
 
 @interface MessagingServicesManager : NSObject {
 	
-	NSMutableArray	*serviceInstances;
-	id				delegate;
+	NSMutableArray							*messagingServices;
+	id <MessagingServicesManagerDelegate>	delegate;
 
 }
 
-@property (assign, nonatomic, readwrite) id delegate;
-@property (retain, nonatomic, readwrite) NSMutableArray *serviceInstances;
+@property (assign, nonatomic, readwrite) id <MessagingServicesManagerDelegate> delegate;
+@property (retain, nonatomic, readwrite) NSMutableArray *messagingServices;
 
-
--(id)initWithDelegate:(id)delegate config:(NSDictionary *)configDictionary;
--(void)startServiceInstance:(MessagingService *)serviceInstance;
--(void)stopServiceInstance:(MessagingService *)serviceInstance;
--(void)startAllServiceInstances;
--(void)stopAllServiceInstances;
+-(id)initWithDelegate:(id <MessagingServicesManagerDelegate>)delegate config:(NSArray *)configArray;
 -(void)sendAttachment:(NSData *)attachment;
--(void)sendAttachment:(NSData *)attachment usingServiceInstance:(MessagingService *)serviceInstance;
+-(void)sendAttachment:(NSData *)attachment usingMessagingService:(MessagingService *)messagingService;
 -(void)sendMessageText:(NSString *)messageText;
--(void)sendMessageText:(NSString *)messageText usingServiceInstance:(MessagingService *)serviceInstance;
+-(void)sendMessageText:(NSString *)messageText usingMessagingService:(MessagingService *)messagingService;;
 
 
 @end

@@ -28,6 +28,8 @@
 	return [[[self.configDictionary objectForKey:serviceTypeKey] retain ] autorelease];
 }
 
-
+-(id)initWithConfig:(NSDictionary *)configDctionary;
+{
+	if (self = [super init];
 
 @end

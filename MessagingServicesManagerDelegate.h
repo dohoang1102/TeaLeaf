@@ -11,15 +11,9 @@
 
 @protocol MessagingServicesManagerDelegate
 
--(void)receivedMessage:(NSString *)message fromServiceInstanceNamed;
+-(void)messageSendSucceeded:(NSString *)requestIdentifier;
+-(void)messageSendFailed:(NSString *)requestIdentifier withError:(NSError *)error;
+-(void)receivedMessage:(NSString *)message fromServiceInstanceNamed(NSString *)serviceInstanceName;
 
-/*
- Implement the MGTwitterEngineDelegate methods, just as the AppController in the demo project does. These are the methods you'll need to implement:
- - (void)requestSucceeded:(NSString *)requestIdentifier; 
- - (void)requestFailed:(NSString *)requestIdentifier withError:(NSError *)error; 
- - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)identifier; 
- - (void)directMessagesReceived:(NSArray *)messages forRequest:(NSString *)identifier; 
- - (void)userInfoReceived:(NSArray *)userInfo forRequest:(NSString *)identifier;
- */
 
 @end

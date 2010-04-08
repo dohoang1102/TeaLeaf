@@ -1,8 +1,7 @@
-Lots!
 
-make the preferences panel reopen after it's bee close
 
 CONFIG APPLICATION:
+- Preferences panel needs a better name than 'window'
 - resolve issue with TableView focus ring bottom side near BWtoolkit widgets not visible (removed for now)
 - Complete error checking in App Delegate
 - Config file and application support directory needs to be root owned and perms 700
@@ -25,6 +24,7 @@ CONFIG APPLICATION:
 - each tab will need us to discard changes or save them, rather than simply having a big "revert" button
 - check window memory management
 - decide on preferences. What is a better layout to mark the computer stolen?
+- need to validate names of service instances which need to be unique.
 
 
 GENERAL:
@@ -36,9 +36,4 @@ INSTALLATION AND PACKAGING:
 - Develop build routines 
 - Add sparkle
 - Write uninstallation processes in README
-
-DAEMON:
-
-
-Deasign Notes:
 

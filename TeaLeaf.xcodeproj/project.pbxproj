@@ -25,6 +25,7 @@
 		7D5D4AE61163D3E20087B95A /* MessagingServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */; };
 		7D5D4AEE1163D9560087B95A /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
 		7D5D4AEF1163D9630087B95A /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
+		7D5D4B3411664B830087B95A /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4B3311664B830087B95A /* NSString+UUID.m */; };
 		7DA93C061163BCF400323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
@@ -79,6 +80,8 @@
 		7D5D4A8011627D8C0087B95A /* Class Diagram.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Class Diagram.pdf"; sourceTree = "<group>"; };
 		7D5D4AE41163D3E20087B95A /* MessagingServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingServicesManager.h; sourceTree = "<group>"; };
 		7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingServicesManager.m; sourceTree = "<group>"; };
+		7D5D4B3211664B830087B95A /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
+		7D5D4B3311664B830087B95A /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
 		7DA93C041163BCF400323BF3 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
 		7DA93C051163BCF400323BF3 /* MessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingService.m; sourceTree = "<group>"; };
 		7DA93C071163BDCD00323BF3 /* FileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMessagingService.h; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 		29B97314FDCFA39411CA2CEA /* TeaLeaf */ = {
 			isa = PBXGroup;
 			children = (
+				7D5D4B3211664B830087B95A /* NSString+UUID.h */,
+				7D5D4B3311664B830087B95A /* NSString+UUID.m */,
 				7D31D0FC10F9D70000DAFC6F /* Globals.h */,
 				7D31D0FD10F9D70000DAFC6F /* Globals.m */,
 				7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config App */,
@@ -258,15 +263,31 @@
 		7D5D4A9311627F290087B95A /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
+				7D5D4AE41163D3E20087B95A /* MessagingServicesManager.h */,
+				7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */,
+				7DA93C7A1164804400323BF3 /* MessagingServicesManagerDelegate.h */,
 				7DA93C041163BCF400323BF3 /* MessagingService.h */,
 				7DA93C051163BCF400323BF3 /* MessagingService.m */,
-				7DA93C071163BDCD00323BF3 /* FileMessagingService.h */,
-				7DA93C081163BDCD00323BF3 /* FileMessagingService.m */,
-				7D5D4AE41163D3E20087B95A /* MessagingServicesManager.h */,
-				7DA93C7A1164804400323BF3 /* MessagingServicesManagerDelegate.h */,
-				7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */,
+				7D5D4B5C116657640087B95A /* Twitter */,
+				7D5D4B5B1166575A0087B95A /* File */,
 			);
 			name = Messaging;
+			sourceTree = "<group>";
+		};
+		7D5D4B5B1166575A0087B95A /* File */ = {
+			isa = PBXGroup;
+			children = (
+				7DA93C071163BDCD00323BF3 /* FileMessagingService.h */,
+				7DA93C081163BDCD00323BF3 /* FileMessagingService.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
+		7D5D4B5C116657640087B95A /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Twitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +375,7 @@
 				7D5D4AE31163D2920087B95A /* FileMessagingService.m in Sources */,
 				7D5D4AE61163D3E20087B95A /* MessagingServicesManager.m in Sources */,
 				7DA93C70116479CB00323BF3 /* MainController.m in Sources */,
+				7D5D4B3411664B830087B95A /* NSString+UUID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
