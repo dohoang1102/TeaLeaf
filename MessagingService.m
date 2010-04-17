@@ -28,8 +28,20 @@
 	return [[[self.configDictionary objectForKey:serviceTypeKey] retain ] autorelease];
 }
 
--(id)initWithConfig:(NSDictionary *)configDctionary;
+-(id)initWithConfig:(NSDictionary *)theConfigDctionary;
 {
-	if (self = [super init];
+	if (self = [super init]) {
+		self.configDictionary = theConfigDctionary;
+		NSLog (@"created service:%@", [self.configDictionary valueForKey:serviceNameKey]);
+	}
+	
+	return self;
+}
+
+-(void)dealloc
+{
+	self.configDictionary = nil;
+	[super dealloc];
+}
 
 @end

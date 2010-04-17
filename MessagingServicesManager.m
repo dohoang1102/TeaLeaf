@@ -13,7 +13,7 @@
 #pragma mark Declare private methods
 @interface MessagingServicesManager()
 
--(void)create
+//-(void)create
 
 
 @end
@@ -27,44 +27,46 @@
 
 
 
--(id)initWithDelegate:(id <MessagingServicesManagerDelegate>)delegate config:(NSDictionary *)configArray
+-(id)initWithDelegate:(id <MessagingServicesManagerDelegate>)theDelegate config:(NSArray *)configArray
 {
-	if (!self = [super init]) {
+	self = [super init];
+	if (!self) {
 		return nil;
 	}
 		
 	// set the delegate
-	self.delegate = delegate;
+	self.delegate = theDelegate;
 	
 	// create the service instances
 	self.messagingServices = [NSMutableArray arrayWithCapacity:1];
 	
 	// create our Messaging Service instances
-	for (NSDictionary *d in configArray)
+	for (NSDictionary *configDictionary in configArray)
 	{
 		// get type
-		NSString *serviceName = [configDictionary valueForKey:serviceNameKey];
+		NSString *serviceType = [configDictionary valueForKey:serviceTypeKey];
 		
 		// construct classname
 		NSString *className = [serviceType stringByAppendingString:@"MessagingService"];
 		
 		// get the class itself
-		Class *class = NSClassFromString(className);
+		Class theClass = NSClassFromString(className);
 		
-		// make the object, and stick it in the dictionary
-		MessagingService *messagingService = [[class alloc] initWithConfig:configDictionary];
-		
+		// make the object, and stick it in the array
+		//MessagingService *messagingService = [[theClass alloc] initWithConfig:configDictionary];
+		MessagingService *messagingService = [[theClass alloc] init];
 		[self.messagingServices addObject:messagingService];
 		[messagingService release];
 	}
+	
+	return self;
 }
 
 -(void)dealloc
 {
 	self.delegate = nil;
 	self.messagingServices = nil;
-	
-	
+		
 	[super dealloc];
 }
 

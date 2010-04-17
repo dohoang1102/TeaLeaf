@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class MessagingService;
+#import "MessagingService.h"
 
 @interface FileMessagingService : MessagingService {
 

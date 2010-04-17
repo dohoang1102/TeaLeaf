@@ -13,7 +13,7 @@
 
 -(void)messageSendSucceeded:(NSString *)requestIdentifier;
 -(void)messageSendFailed:(NSString *)requestIdentifier withError:(NSError *)error;
--(void)receivedMessage:(NSString *)message fromServiceInstanceNamed(NSString *)serviceInstanceName;
+-(void)receivedMessage:(NSString *)message fromServiceInstanceNamed:(NSString *)serviceInstanceName;
 
 
 @end
