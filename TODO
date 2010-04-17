@@ -1,4 +1,6 @@
-
+IMMEDIATE:
+- Replan the relationship between MessagingServicesManager MessagingServices, and each subclass
+- MessagingService should be an abstract class, and have some stuff that it already needs.
 
 CONFIG APPLICATION:
 - Preferences panel needs a better name than 'window'
@@ -18,7 +20,6 @@ CONFIG APPLICATION:
 - help sheet on first launch
 - some more descriptive texts on table view
 - boilerplate defaults
-- use coredata to store the config bevuase it may well change and we will need to migrate it
 - look at espionage for changes to user interface that look cooler. icons next to each service name, for example.
 -		and and enabled or on/off button.
 - each tab will need us to discard changes or save them, rather than simply having a big "revert" button
