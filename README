@@ -1,9 +1,8 @@
 TeaLeaf
 -------
+A daemon will install which tracks current location and other system state data.
+It will then check (email / twitter / xmpp / website / other) if it is stolen, and report these through the same channel
 
-Software will track twitter direct messages. When a special message is received, it will tweet it's current location.
-
-It will also take regular pictures of the current user, i.e. the thief, and (email / tweet / xmpp / ????) 
 
 Q: Why "TeaLeaf"
-A: Tealeaf is the Cockney Rhyming slag for a "thief"
+A: Tealeaf is the Cockney Rhyming slang for a "thief"
