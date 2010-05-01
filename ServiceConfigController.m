@@ -12,6 +12,10 @@
 @implementation ServiceConfigController
 
 @synthesize configDictionary;
+@synthesize readDirectoryTextField;
+@synthesize	sendDirectoryTextField;
+@synthesize objectController;
+
 @dynamic	serviceName, serviceType;
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -68,6 +72,54 @@
 {
 	
 	return [[[self.configDictionary objectForKey:serviceTypeKey] retain ] autorelease];
+}
+
+
+//-(IBAction)chooseReadDirectory:
+//{
+//	
+//}
+//-(IBAction)chooseSendDirectory:(NSButton *)sender;
+
+-(IBAction)chooseDirectory:(NSButton *)sender;
+{
+	// 1 is the read from dir, 2 is the send to dir
+	
+	// get a chooser box and configure
+	NSOpenPanel *panel = [NSOpenPanel openPanel];
+
+	[panel setAllowsMultipleSelection:NO];
+	[panel setCanChooseFiles:NO];
+	[panel setCanChooseDirectories:YES];
+	NSInteger result = [panel runModal];
+	
+	if (result == NSOKButton)  {
+		
+		
+		NSURL *chosenDirectory = [[panel URLs] objectAtIndex:0];
+		
+		
+		// 1 is the read from dir, 2 is the send to dir
+		switch ([sender tag]) {
+		case 1:
+				
+				//[self.readDirectoryTextField setStringValue:[chosenDirectory path]];
+				// set the configDictionary. th user interface fields are bound to it
+				[self.configDictionary setObject:[chosenDirectory path] forKey:directoryToReadFromKey];
+				
+			break;
+		case 2:
+				//[self.sendDirectoryTextField setStringValue:[chosenDirectory path]];
+				[self.configDictionary setObject:[chosenDirectory path] forKey:directoryToSendToKey];
+
+			break;
+			
+		default:
+			NSLog(@"unkown control - am expecting a choose button");
+			break;
+		}
+	}
+	
 }
 
 @end

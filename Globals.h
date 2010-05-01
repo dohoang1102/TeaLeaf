@@ -10,5 +10,10 @@
 extern NSString * const serviceNameKey;
 extern NSString * const serviceTypeKey; 
 
+// fileMessagingService config Dictionary Keys
+extern NSString * const directoryToReadFromKey;
+extern NSString * const directoryToSendToKey;
+
+
 
 

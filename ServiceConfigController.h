@@ -12,14 +12,20 @@
 @interface ServiceConfigController : NSViewController {
 
 	NSMutableDictionary *configDictionary;
-
+	NSTextField			*readDirectoryTextField;
+	NSTextField			*sendDirectoryTextField;
+	NSObjectController  *objectController;
 }
 
 @property (retain, nonatomic) NSMutableDictionary *configDictionary;
 
-@property (retain, nonatomic) NSString	*serviceName;
-@property (retain, nonatomic) NSString	*serviceType;
+@property (retain, nonatomic)	NSString	*serviceName;
+@property (retain, nonatomic)	NSString	*serviceType;
 
+@property (assign, nonatomic) IBOutlet		NSTextField	*readDirectoryTextField;
+@property (assign, nonatomic) IBOutlet		NSTextField	*sendDirectoryTextField;
+@property (assign, nonatomic) IBOutlet		NSObjectController  *objectController;
 
+-(IBAction)chooseDirectory:(NSButton *)sender;
 
 @end

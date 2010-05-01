@@ -10,3 +10,7 @@
 
 NSString * const serviceNameKey = @"serviceName"; 
 NSString * const serviceTypeKey = @"serviceType"; 
+
+NSString * const directoryToReadFromKey	= @"directoryToReadFrom";
+NSString * const directoryToSendToKey	= @"directoryToSendTo";
+
