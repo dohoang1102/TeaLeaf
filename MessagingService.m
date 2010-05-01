@@ -7,32 +7,33 @@
 //
 
 #import "MessagingService.h"
+#import "NSString+UUID.h"
 #import	"Globals.h"
 
 
 @implementation MessagingService
 @synthesize configDictionary;
+@synthesize delegate;
 @dynamic serviceName, serviceType;
 
 
 -(NSString*)serviceName
-{
-	
+{	
 	return [[[self.configDictionary objectForKey:serviceNameKey] retain ] autorelease];
 }
 
 
 -(NSString*)serviceType
 {
-	
 	return [[[self.configDictionary objectForKey:serviceTypeKey] retain ] autorelease];
 }
 
--(id)initWithConfig:(NSDictionary *)theConfigDctionary;
+-(id)initWithDelegate:(id <MessagingServiceDelegateProtocol>) aDelegate config:(NSDictionary *)aConfigDictionary;
 {
 	if (self = [super init]) {
-		self.configDictionary = theConfigDctionary;
-		NSLog (@"created service:%@", [self.configDictionary valueForKey:serviceNameKey]);
+		self.configDictionary = aConfigDictionary;
+		NSLog (@"created service:%@, of type:%@", self.serviceName, self.serviceType);
+		self.delegate = aDelegate;
 	}
 	
 	return self;
@@ -42,6 +43,28 @@
 {
 	self.configDictionary = nil;
 	[super dealloc];
+}
+
+
+-(NSString *)sendTextMessage:(NSString *)textMessage
+{
+	NSLog(@"Error - sendTextMessage needs to be overidden in a subclass");
+	return nil;
+}
+
+-(NSString *)sendAttachment:(NSData *)attachment; 
+{
+	NSLog(@"Error - sendAttachment needs to be overidden in a subclass");
+	return nil;
+}
+
+-(NSString *)newRequestID
+{
+	NSString *requestID = [NSString stringWithNewUUID];
+	
+	NSLog(@"requestID = %@", requestID);
+	
+	return requestID;
 }
 
 @end

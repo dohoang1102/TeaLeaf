@@ -12,25 +12,25 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MessagingServicesManagerDelegate.h"
+#import "MessagingServiceDelegateProtocol.h"
 
 @class MessagingService;
 
 @interface MessagingServicesManager : NSObject {
 	
 	NSMutableArray							*messagingServices;
-	id <MessagingServicesManagerDelegate>	delegate;
+	id <MessagingServiceDelegateProtocol>	delegate;
 
 }
 
-@property (assign, nonatomic, readwrite) id <MessagingServicesManagerDelegate> delegate;
+@property (assign, nonatomic, readwrite) id <MessagingServiceDelegateProtocol> delegate;
 @property (retain, nonatomic, readwrite) NSMutableArray *messagingServices;
 
--(id)initWithDelegate:(id <MessagingServicesManagerDelegate>)delegate config:(NSArray *)configArray;
+-(id)initWithDelegate:(id <MessagingServiceDelegateProtocol>)delegate config:(NSArray *)configArray;
 -(void)sendAttachment:(NSData *)attachment;
 -(void)sendAttachment:(NSData *)attachment usingMessagingService:(MessagingService *)messagingService;
 -(void)sendMessageText:(NSString *)messageText;
--(void)sendMessageText:(NSString *)messageText usingMessagingService:(MessagingService *)messagingService;;
+-(void)sendMessageText:(NSString *)messageText usingMessagingService:(MessagingService *)messagingService;
 
 
 @end

@@ -26,7 +26,12 @@
 		7D5D4AEE1163D9560087B95A /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
 		7D5D4AEF1163D9630087B95A /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
 		7D5D4B3411664B830087B95A /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4B3311664B830087B95A /* NSString+UUID.m */; };
-		7DA93C061163BCF400323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
+		7D673753118CCB92002CCD49 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D673752118CCB92002CCD49 /* SenTestingKit.framework */; };
+		7D722D09118CCCBD00648F39 /* TestFileMessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D67374A118CC209002CCD49 /* TestFileMessagingService.m */; };
+		7D722D46118CCE9A00648F39 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
+		7D722D77118CD71E00648F39 /* FileMessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C081163BDCD00323BF3 /* FileMessagingService.m */; };
+		7D722D7A118CD72D00648F39 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
+		7D722DB9118CDE9D00648F39 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4B3311664B830087B95A /* NSString+UUID.m */; };
 		7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
 		7DA93C70116479CB00323BF3 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C6F116479CB00323BF3 /* MainController.m */; };
@@ -34,6 +39,16 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D722E1C118CE82500648F39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D673743118CC1E6002CCD49 /* UnitTests */;
+			remoteInfo = UnitTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7D4AB4DF1151074F00C14940 /* CopyFiles */ = {
@@ -82,6 +97,13 @@
 		7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingServicesManager.m; sourceTree = "<group>"; };
 		7D5D4B3211664B830087B95A /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		7D5D4B3311664B830087B95A /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
+		7D67361F118C9A73002CCD49 /* MessagingServiceDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingServiceDelegateProtocol.h; sourceTree = "<group>"; };
+		7D673739118CBC9A002CCD49 /* TestFileMessagingService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestFileMessagingService-Info.plist"; sourceTree = "<group>"; };
+		7D673744118CC1E6002CCD49 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D673745118CC1E6002CCD49 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		7D673749118CC209002CCD49 /* TestFileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFileMessagingService.h; sourceTree = "<group>"; };
+		7D67374A118CC209002CCD49 /* TestFileMessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFileMessagingService.m; sourceTree = "<group>"; };
+		7D673752118CCB92002CCD49 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7DA93C041163BCF400323BF3 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
 		7DA93C051163BCF400323BF3 /* MessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingService.m; sourceTree = "<group>"; };
 		7DA93C071163BDCD00323BF3 /* FileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMessagingService.h; sourceTree = "<group>"; };
@@ -89,7 +111,6 @@
 		7DA93C211163BE4200323BF3 /* uk.co.swandrift.tealeaf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = uk.co.swandrift.tealeaf; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA93C6E116479CB00323BF3 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		7DA93C6F116479CB00323BF3 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
-		7DA93C7A1164804400323BF3 /* MessagingServicesManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingServicesManagerDelegate.h; sourceTree = "<group>"; };
 		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = TODO; sourceTree = "<group>"; };
 		7DFECCD51142AA0500AA2151 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7DFECCD61142AADA00AA2151 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -98,6 +119,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7D673741118CC1E6002CCD49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D673753118CCB92002CCD49 /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DA93C1F1163BE4200323BF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -122,6 +151,7 @@
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */,
+				7D673752118CCB92002CCD49 /* SenTestingKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -141,6 +171,7 @@
 			children = (
 				8D1107320486CEB800E47090 /* TeaLeaf.app */,
 				7DA93C211163BE4200323BF3 /* uk.co.swandrift.tealeaf */,
+				7D673744118CC1E6002CCD49 /* UnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +191,8 @@
 				7DFECCD41142A9D000AA2151 /* TODO */,
 				7DFECCD51142AA0500AA2151 /* LICENSE */,
 				7DFECCD61142AADA00AA2151 /* README */,
+				7D673739118CBC9A002CCD49 /* TestFileMessagingService-Info.plist */,
+				7D673745118CC1E6002CCD49 /* UnitTests-Info.plist */,
 			);
 			name = TeaLeaf;
 			sourceTree = "<group>";
@@ -252,6 +285,7 @@
 		7D31D1DA10F9FB2700DAFC6F /* Daemon */ = {
 			isa = PBXGroup;
 			children = (
+				7D673722118CBB9E002CCD49 /* Unit Tests */,
 				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
 				7DA93C6E116479CB00323BF3 /* MainController.h */,
 				7DA93C6F116479CB00323BF3 /* MainController.m */,
@@ -265,7 +299,7 @@
 			children = (
 				7D5D4AE41163D3E20087B95A /* MessagingServicesManager.h */,
 				7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */,
-				7DA93C7A1164804400323BF3 /* MessagingServicesManagerDelegate.h */,
+				7D67361F118C9A73002CCD49 /* MessagingServiceDelegateProtocol.h */,
 				7DA93C041163BCF400323BF3 /* MessagingService.h */,
 				7DA93C051163BCF400323BF3 /* MessagingService.m */,
 				7D5D4B5C116657640087B95A /* Twitter */,
@@ -290,9 +324,36 @@
 			name = Twitter;
 			sourceTree = "<group>";
 		};
+		7D673722118CBB9E002CCD49 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7D673749118CC209002CCD49 /* TestFileMessagingService.h */,
+				7D67374A118CC209002CCD49 /* TestFileMessagingService.m */,
+			);
+			name = "Unit Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7D673743118CC1E6002CCD49 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D673748118CC1E7002CCD49 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				7D67373F118CC1E6002CCD49 /* Resources */,
+				7D673740118CC1E6002CCD49 /* Sources */,
+				7D673741118CC1E6002CCD49 /* Frameworks */,
+				7D673742118CC1E6002CCD49 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 7D673744118CC1E6002CCD49 /* UnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		7DA93C201163BE4200323BF3 /* uk.co.swandrift.tealeaf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DA93C251163BE6300323BF3 /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */;
@@ -303,6 +364,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7D722E1D118CE82500648F39 /* PBXTargetDependency */,
 			);
 			name = uk.co.swandrift.tealeaf;
 			productName = uk.co.swandrift.tealeaf;
@@ -342,11 +404,19 @@
 			targets = (
 				8D1107260486CEB800E47090 /* TeaLeaf */,
 				7DA93C201163BE4200323BF3 /* uk.co.swandrift.tealeaf */,
+				7D673743118CC1E6002CCD49 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7D67373F118CC1E6002CCD49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,14 +434,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D673742118CC1E6002CCD49 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		7D673740118CC1E6002CCD49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D722D46118CCE9A00648F39 /* Globals.m in Sources */,
+				7D722D7A118CD72D00648F39 /* MessagingService.m in Sources */,
+				7D722D77118CD71E00648F39 /* FileMessagingService.m in Sources */,
+				7D722D09118CCCBD00648F39 /* TestFileMessagingService.m in Sources */,
+				7D722DB9118CDE9D00648F39 /* NSString+UUID.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DA93C1E1163BE4200323BF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */,
 				7D5D4AEE1163D9560087B95A /* Globals.m in Sources */,
 				7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */,
-				7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */,
 				7D5D4AE31163D2920087B95A /* FileMessagingService.m in Sources */,
 				7D5D4AE61163D3E20087B95A /* MessagingServicesManager.m in Sources */,
 				7DA93C70116479CB00323BF3 /* MainController.m in Sources */,
@@ -390,11 +488,18 @@
 				7D0E04C71153B153007C3CFE /* ServiceConfigController.m in Sources */,
 				7D3F68B11155263100008258 /* TwitterServiceConfigController.m in Sources */,
 				7D2B51A71156762C00A68F2E /* PreferencesController.m in Sources */,
-				7DA93C061163BCF400323BF3 /* MessagingService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D722E1D118CE82500648F39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D673743118CC1E6002CCD49 /* UnitTests */;
+			targetProxy = 7D722E1C118CE82500648F39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -408,6 +513,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7D673746118CC1E7002CCD49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7D673747118CC1E7002CCD49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		7DA93C231163BE4500323BF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -528,6 +687,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7D673748118CC1E7002CCD49 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D673746118CC1E7002CCD49 /* Debug */,
+				7D673747118CC1E7002CCD49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7DA93C251163BE6300323BF3 /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -27,7 +27,7 @@
 
 
 
--(id)initWithDelegate:(id <MessagingServicesManagerDelegate>)theDelegate config:(NSArray *)configArray
+-(id)initWithDelegate:(id <MessagingServiceDelegateProtocol>)theDelegate config:(NSArray *)configArray
 {
 	self = [super init];
 	if (!self) {

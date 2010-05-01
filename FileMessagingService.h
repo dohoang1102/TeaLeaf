@@ -13,4 +13,9 @@
 
 }
 
+
+@property (readonly, nonatomic) NSString *directoryToReadFrom;
+@property (readonly, nonatomic) NSString *directoryToSendTo;
+
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MessagingServiceDelegateProtocol.h"
 
 //
 // Base class for each messaging service (twitter, web, etc)
@@ -14,12 +15,21 @@
 
 @interface MessagingService : NSObject {
 	
-	NSDictionary *configDictionary;
+	NSDictionary							*configDictionary;
+	id <MessagingServiceDelegateProtocol>	delegate;
 
 }
 	
-@property (copy, nonatomic)		NSDictionary		*configDictionary;
-@property (readonly, nonatomic)	NSString			*serviceName;
-@property (readonly, nonatomic)	NSString			*serviceType;
+@property (copy, nonatomic)		NSDictionary							*configDictionary;
+@property (assign, nonatomic)   id <MessagingServiceDelegateProtocol>	delegate;
+@property (readonly, nonatomic)	NSString								*serviceName;
+@property (readonly, nonatomic)	NSString								*serviceType;
+
+-(id)initWithDelegate:(id <MessagingServiceDelegateProtocol>) aDelegate config:(NSDictionary *)aConfigDictionary;
+
+-(NSString *)sendTextMessage:(NSString *)textMessage;
+-(NSString *)sendAttachment:(NSData *)attachment; 
+
+-(NSString *)newRequestID;
 
 @end
