@@ -28,7 +28,7 @@ void fsevents_callback(ConstFSEventStreamRef streamRef,
 {
     FileMessagingService *fms = (FileMessagingService *)userData;
 	
-	NSLog(@"Something changed in %@", fms.directoryToReadFrom);
+	//NSLog(@"Something changed in %@", fms.directoryToReadFrom);
 	
 	size_t i;
 	for(i=0; i<numEvents; i++){
@@ -60,15 +60,24 @@ void fsevents_callback(ConstFSEventStreamRef streamRef,
 	return self;
 }
 
+-(void)dealloc
+{
+	FSEventStreamStop(stream);
+    FSEventStreamInvalidate(stream);
+	FSEventStreamRelease(stream); 
+	
+	[super dealloc];
+}
+
 #pragma mark accessors
 -(NSString *) directoryToReadFrom
 {
-	return [[[self.configDictionary valueForKey:directoryToReadFromKey] retain] autorelease];
+	return [[[self.configDictionary valueForKey:directoryToReadFromKey] copy] autorelease];
 }
 
 -(NSString *) directoryToSendTo
 {
-	return [[[self.configDictionary valueForKey:directoryToSendToKey] retain] autorelease];
+	return [[[self.configDictionary valueForKey:directoryToSendToKey] copy] autorelease];
 }
 
 
@@ -156,13 +165,13 @@ void fsevents_callback(ConstFSEventStreamRef streamRef,
 		}
 		// delete the file
 		
+		
 		NSError *error = nil;
 		[fm removeItemAtPath:fullPath error:&error];
 		
 		if (error)
 			NSLog(@"error:%@",error);
-		
-	}
+		}
 					
 }
 

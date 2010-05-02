@@ -16,7 +16,7 @@
 
 @class MessagingService;
 
-@interface MessagingServicesManager : NSObject {
+@interface MessagingServicesManager : NSObject <MessagingServiceDelegateProtocol> {
 	
 	NSMutableArray							*messagingServices;
 	id <MessagingServiceDelegateProtocol>	delegate;
@@ -26,11 +26,13 @@
 @property (assign, nonatomic, readwrite) id <MessagingServiceDelegateProtocol> delegate;
 @property (retain, nonatomic, readwrite) NSMutableArray *messagingServices;
 
--(id)initWithDelegate:(id <MessagingServiceDelegateProtocol>)delegate config:(NSArray *)configArray;
--(void)sendAttachment:(NSData *)attachment;
--(void)sendAttachment:(NSData *)attachment usingMessagingService:(MessagingService *)messagingService;
--(void)sendMessageText:(NSString *)messageText;
--(void)sendMessageText:(NSString *)messageText usingMessagingService:(MessagingService *)messagingService;
+-(id)initWithDelegate:(id <MessagingServiceDelegateProtocol>)theDelegate configArray:(NSArray *)configArray;
+
+-(NSArray *)sendTextMessage:(NSString *)messageText;
+-(NSString *)sendTextMessage:(NSString *)messageText usingMessagingServiceNamed:(NSString *)serviceName;
+
+-(NSArray *)sendAttachment:(NSData *)attachment;
+-(NSString *)sendAttachment:(NSData *)attachment usingMessagingServiceNamed:(NSString *)serviceName;
 
 
 @end

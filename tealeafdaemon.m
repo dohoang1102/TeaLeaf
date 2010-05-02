@@ -6,21 +6,22 @@
 //  Copyright 2010 Swandrift Consulting Limited. All rights reserved.
 //
 
-//#import "DaemonController.h"
+#import "MainController.h"
 
 // Main
 
 int main (int argc, const char * argv[]) 
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
 	// Start a Controller
-	//DaemonController *controller = [[DaemonController alloc] init];
-	//[controller configure];
-	//[controller run];
+	MainController *controller = [[MainController alloc] init];
 	
-	//[controller dealloc];
+	[controller run];
 	
-	//NSLog(@"exiting");
+	[controller dealloc];
+	
+	NSLog(@"exiting");
 	
 	
 	[pool release];

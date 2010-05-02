@@ -8,6 +8,7 @@
 
 #import "MessagingServicesManager.h"
 #import "NSString+UUID.h"
+#import "MessagingService.h"
 #import "Globals.h"
 
 #pragma mark Declare private methods
@@ -27,7 +28,7 @@
 
 
 
--(id)initWithDelegate:(id <MessagingServiceDelegateProtocol>)theDelegate config:(NSArray *)configArray
+-(id)initWithDelegate:(id <MessagingServiceDelegateProtocol>)theDelegate configArray:(NSArray *)configArray
 {
 	self = [super init];
 	if (!self) {
@@ -36,7 +37,7 @@
 		
 	// set the delegate
 	self.delegate = theDelegate;
-	
+		
 	// create the service instances
 	self.messagingServices = [NSMutableArray arrayWithCapacity:1];
 	
@@ -52,9 +53,9 @@
 		// get the class itself
 		Class theClass = NSClassFromString(className);
 		
-		// make the object, and stick it in the array
-		//MessagingService *messagingService = [[theClass alloc] initWithConfig:configDictionary];
-		MessagingService *messagingService = [[theClass alloc] init];
+		MessagingService *messagingService = [[theClass alloc] initWithDelegate:self config:configDictionary];
+		
+		
 		[self.messagingServices addObject:messagingService];
 		[messagingService release];
 	}
@@ -71,17 +72,67 @@
 }
 
 
--(void)sendAttachment:(NSData *)attachment
+
+//
+// Send the message to all message services and return an array of the request ID's
+-(NSArray *)sendTextMessage:(NSString *)messageText
 {
+	//NSString *requestID;
+	NSMutableArray *requestIDs = [[NSMutableArray alloc] initWithCapacity:3];
+	for (MessagingService *ms in self.messagingServices)
+	{
+		NSString *requestID = [ms sendTextMessage:messageText];
+		[requestIDs addObject:requestID];
+		
+	}
+	
+	return [requestIDs autorelease];
 }
--(void)sendAttachment:(NSData *)attachment usingMessagingService:(MessagingService *)messagingService
+
+
+-(NSString *)sendTextMessage:(NSString *)messageText usingMessagingServiceNamed:(NSString *)serviceName;
 {
+	for (MessagingService *ms in self.messagingServices)
+	{
+		if ([ms.serviceName isEqual:serviceName]) {
+			NSString *requestID = [ms sendTextMessage:messageText];
+			return requestID;
+		}
+	}
+	NSLog(@"service name:%@ not found", serviceName);
+	return nil;
 }
--(void)sendMessageText:(NSString *)messageText
+
+-(NSArray *)sendAttachment:(NSData *)attachment
 {
+	return nil;
 }
--(void)sendMessageText:(NSString *)messageText usingMessagingService:(MessagingService *)messagingService
+
+-(NSString *)sendAttachment:(NSData *)attachment usingMessagingServiceNamed:(NSString *)serviceName
 {
+	return nil;
 }
+
+//
+// delegate methods
+//
+-(void)messageSendSucceeded:(NSString *)requestIdentifier
+{
+	NSLog(@"Calling delegate");
+	[self.delegate messageSendSucceeded:requestIdentifier];
+}
+
+-(void)messageSendFailed:(NSString *)requestIdentifier withError:(NSError *)error 
+{	
+	[self.delegate messageSendFailed:requestIdentifier withError:error];
+}
+
+-(void)receivedMessage:(NSString *)message fromServiceInstanceNamed:(NSString *)serviceInstanceName
+{
+	[self.delegate receivedMessage:message fromServiceInstanceNamed:serviceInstanceName];
+}
+
+
+
 
 @end

@@ -32,6 +32,8 @@
 		7D722D77118CD71E00648F39 /* FileMessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C081163BDCD00323BF3 /* FileMessagingService.m */; };
 		7D722D7A118CD72D00648F39 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7D722DB9118CDE9D00648F39 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4B3311664B830087B95A /* NSString+UUID.m */; };
+		7D722F8B118DBF0F00648F39 /* TestMessagingServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */; };
+		7D722F95118DC5B700648F39 /* MessagingServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */; };
 		7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
 		7DA93C70116479CB00323BF3 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C6F116479CB00323BF3 /* MainController.m */; };
@@ -41,11 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7D722E1C118CE82500648F39 /* PBXContainerItemProxy */ = {
+		7D72307E118DEF2900648F39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7D673743118CC1E6002CCD49;
+			remoteGlobalIDString = 7D673743118CC1E6002CCD49 /* UnitTests */;
 			remoteInfo = UnitTests;
 		};
 /* End PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		7D673749118CC209002CCD49 /* TestFileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFileMessagingService.h; sourceTree = "<group>"; };
 		7D67374A118CC209002CCD49 /* TestFileMessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFileMessagingService.m; sourceTree = "<group>"; };
 		7D673752118CCB92002CCD49 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7D722F89118DBF0F00648F39 /* TestMessagingServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMessagingServicesManager.h; sourceTree = "<group>"; };
+		7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessagingServicesManager.m; sourceTree = "<group>"; };
 		7DA93C041163BCF400323BF3 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
 		7DA93C051163BCF400323BF3 /* MessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingService.m; sourceTree = "<group>"; };
 		7DA93C071163BDCD00323BF3 /* FileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMessagingService.h; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 			children = (
 				7D673749118CC209002CCD49 /* TestFileMessagingService.h */,
 				7D67374A118CC209002CCD49 /* TestFileMessagingService.m */,
+				7D722F89118DBF0F00648F39 /* TestMessagingServicesManager.h */,
+				7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */,
 			);
 			name = "Unit Tests";
 			sourceTree = "<group>";
@@ -364,7 +370,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				7D722E1D118CE82500648F39 /* PBXTargetDependency */,
+				7D72307F118DEF2900648F39 /* PBXTargetDependency */,
 			);
 			name = uk.co.swandrift.tealeaf;
 			productName = uk.co.swandrift.tealeaf;
@@ -457,9 +463,11 @@
 			files = (
 				7D722D46118CCE9A00648F39 /* Globals.m in Sources */,
 				7D722D7A118CD72D00648F39 /* MessagingService.m in Sources */,
+				7D722F95118DC5B700648F39 /* MessagingServicesManager.m in Sources */,
 				7D722D77118CD71E00648F39 /* FileMessagingService.m in Sources */,
 				7D722D09118CCCBD00648F39 /* TestFileMessagingService.m in Sources */,
 				7D722DB9118CDE9D00648F39 /* NSString+UUID.m in Sources */,
+				7D722F8B118DBF0F00648F39 /* TestMessagingServicesManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,10 +502,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D722E1D118CE82500648F39 /* PBXTargetDependency */ = {
+		7D72307F118DEF2900648F39 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7D673743118CC1E6002CCD49 /* UnitTests */;
-			targetProxy = 7D722E1C118CE82500648F39 /* PBXContainerItemProxy */;
+			targetProxy = 7D72307E118DEF2900648F39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

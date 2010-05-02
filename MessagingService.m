@@ -32,7 +32,7 @@
 {
 	if (self = [super init]) {
 		self.configDictionary = aConfigDictionary;
-		NSLog (@"created service:%@, of type:%@", self.serviceName, self.serviceType);
+		//NSLog (@"created service:%@, of type:%@", self.serviceName, self.serviceType);
 		self.delegate = aDelegate;
 	}
 	

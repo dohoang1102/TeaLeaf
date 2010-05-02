@@ -7,10 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MessagingServicesManager.h"
 
 
-@interface MainController : NSObject {
+@interface MainController : NSObject <MessagingServiceDelegateProtocol> {
+	
+	MessagingServicesManager	*msm;
+	NSMutableArray				*config;
+	NSString					*inboundMessageText;
 
 }
+-(void)run;
 
 @end
