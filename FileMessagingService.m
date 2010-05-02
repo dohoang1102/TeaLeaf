@@ -152,6 +152,7 @@ void fsevents_callback(ConstFSEventStreamRef streamRef,
 	NSFileManager *fm = [NSFileManager defaultManager];
 	NSArray *contents = [fm contentsOfDirectoryAtPath:messagePath error:NULL];
 	NSString* fullPath = nil;
+	NSError *error = nil;
 	
 	for(NSString* node in contents) {
 		fullPath = [NSString stringWithFormat:@"%@/%@", messagePath, node];
@@ -159,18 +160,21 @@ void fsevents_callback(ConstFSEventStreamRef streamRef,
 		{
 			NSString *messageText = [NSString stringWithContentsOfFile:fullPath 
 															  encoding:NSASCIIStringEncoding 
-																 error:NULL];
+																 error:&error];
+			if (error) {
+				NSLog(@"error reading file:%@",error);
+				return;
+			}
 			[self.delegate receivedMessage:messageText fromServiceInstanceNamed:self.serviceName];
 					
 		}
 		// delete the file
 		
-		
-		NSError *error = nil;
+		error = nil;
 		[fm removeItemAtPath:fullPath error:&error];
 		
 		if (error)
-			NSLog(@"error:%@",error);
+			NSLog(@"error deleting file:%@",error);
 		}
 					
 }
