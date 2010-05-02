@@ -10,6 +10,8 @@
 #import "MessagingService.h"
 
 @interface FileMessagingService : MessagingService {
+	FSEventStreamRef stream;
+
 
 }
 
@@ -17,5 +19,6 @@
 @property (readonly, nonatomic) NSString *directoryToReadFrom;
 @property (readonly, nonatomic) NSString *directoryToSendTo;
 
+- (void)processInboundMessage:(NSString *)messagePath;
 
 @end

@@ -101,6 +101,38 @@
 	[failureRequestID release];
 }
 
+-(void)createMessageFile
+{
+	NSString *fileContents = [NSString stringWithString:@"The quick brown fox jumps over the lazy dog"];
+	NSString *fullPath = [ms.directoryToReadFrom stringByAppendingPathComponent:@"test.txt"];
+	
+	[fileContents writeToFile:fullPath atomically:YES encoding:NSASCIIStringEncoding error:NULL];
+}
+
+-(void)testMessageReceived
+{
+	// install timer
+	NSTimer *t = [NSTimer scheduledTimerWithTimeInterval:0.5
+											 target:self 
+										   selector:@selector(createMessageFile) 
+										   userInfo:nil 
+											repeats:NO];
+	
+	[[NSRunLoop currentRunLoop] addTimer:t forMode:NSDefaultRunLoopMode];
+	
+	// set up runloop to last for 5 seconds.
+	CFRunLoopRunInMode(kCFRunLoopDefaultMode,2, NO);
+
+	// sleep(5);
+	
+	STAssertEqualObjects (@"The quick brown fox jumps over the lazy dog", inboundMessageText, 
+						  @"inbound message text should have been:%@, but was actually:%@",
+						  @"The quick brown fox jumps over the lazy dog", 
+						  inboundMessageText);
+}
+
+
+
 //-(void)testServiceTypeInPlist
 //{
 //
@@ -126,6 +158,10 @@
 
 -(void)receivedMessage:(NSString *)message fromServiceInstanceNamed:(NSString *)serviceInstanceName
 {
+	NSLog(@"received message");
+	
+	inboundMessageText = [message copy];
+	
 }
 
 

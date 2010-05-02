@@ -19,6 +19,7 @@
 	FileMessagingService	*ms;
 	NSString				*successRequestID;
 	NSString				*failureRequestID;
+	NSString				*inboundMessageText;
 	
 }
 
