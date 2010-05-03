@@ -36,6 +36,8 @@
 		7D722F95118DC5B700648F39 /* MessagingServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */; };
 		7D7230D4118ED1E500648F39 /* ConfigurationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */; };
 		7D7230D5118ED1E500648F39 /* ConfigurationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */; };
+		7D723175118F00EF00648F39 /* MyLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D723174118F00EF00648F39 /* MyLocationManager.m */; };
+		7D72318E118F23F400648F39 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D72318D118F23F400648F39 /* CoreLocation.framework */; };
 		7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
 		7DA93C70116479CB00323BF3 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C6F116479CB00323BF3 /* MainController.m */; };
@@ -43,16 +45,6 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7D72307E118DEF2900648F39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7D673743118CC1E6002CCD49;
-			remoteInfo = UnitTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7D4AB4DF1151074F00C14940 /* CopyFiles */ = {
@@ -112,6 +104,10 @@
 		7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessagingServicesManager.m; sourceTree = "<group>"; };
 		7D7230D2118ED1E500648F39 /* ConfigurationDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationDataManager.h; sourceTree = "<group>"; };
 		7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationDataManager.m; sourceTree = "<group>"; };
+		7D723173118F00EF00648F39 /* MyLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationManager.h; sourceTree = "<group>"; };
+		7D723174118F00EF00648F39 /* MyLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationManager.m; sourceTree = "<group>"; };
+		7D72317F118F02C100648F39 /* MyLocationManagerDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationManagerDelegateProtocol.h; sourceTree = "<group>"; };
+		7D72318D118F23F400648F39 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7DA93C041163BCF400323BF3 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
 		7DA93C051163BCF400323BF3 /* MessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingService.m; sourceTree = "<group>"; };
 		7DA93C071163BDCD00323BF3 /* FileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMessagingService.h; sourceTree = "<group>"; };
@@ -139,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D72318E118F23F400648F39 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +157,7 @@
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */,
 				7D673752118CCB92002CCD49 /* SenTestingKit.framework */,
+				7D72318D118F23F400648F39 /* CoreLocation.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -290,6 +288,9 @@
 		7D31D1DA10F9FB2700DAFC6F /* Daemon */ = {
 			isa = PBXGroup;
 			children = (
+				7D723173118F00EF00648F39 /* MyLocationManager.h */,
+				7D723174118F00EF00648F39 /* MyLocationManager.m */,
+				7D72317F118F02C100648F39 /* MyLocationManagerDelegateProtocol.h */,
 				7D673722118CBB9E002CCD49 /* Unit Tests */,
 				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
 				7DA93C6E116479CB00323BF3 /* MainController.h */,
@@ -384,7 +385,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7D72307F118DEF2900648F39 /* PBXTargetDependency */,
 			);
 			name = uk.co.swandrift.tealeaf;
 			productName = uk.co.swandrift.tealeaf;
@@ -489,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D7230D5118ED1E500648F39 /* ConfigurationDataManager.m in Sources */,
 				7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */,
 				7D5D4AEE1163D9560087B95A /* Globals.m in Sources */,
 				7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */,
@@ -496,7 +497,7 @@
 				7D5D4AE61163D3E20087B95A /* MessagingServicesManager.m in Sources */,
 				7DA93C70116479CB00323BF3 /* MainController.m in Sources */,
 				7D5D4B3411664B830087B95A /* NSString+UUID.m in Sources */,
-				7D7230D5118ED1E500648F39 /* ConfigurationDataManager.m in Sources */,
+				7D723175118F00EF00648F39 /* MyLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,14 +517,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7D72307F118DEF2900648F39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7D673743118CC1E6002CCD49 /* UnitTests */;
-			targetProxy = 7D72307E118DEF2900648F39 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {

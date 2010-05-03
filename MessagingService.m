@@ -62,8 +62,6 @@
 {
 	NSString *requestID = [NSString stringWithNewUUID];
 	
-	NSLog(@"requestID = %@", requestID);
-	
 	return requestID;
 }
 

@@ -1,6 +1,9 @@
 IMMEDIATE:
-- Replan the relationship between MessagingServicesManager MessagingServices, and each subclass
-- MessagingService should be an abstract class, and have some stuff that it already needs.
+
+- we will focus on twitter for 1.0. this means testing using the file, adding twitter, and then redoing the 
+  config app to shoow only twitter (can still dynamically load...
+
+
 
 CONFIG APPLICATION:
 - Preferences panel needs a better name than 'window'
@@ -30,6 +33,7 @@ CONFIG APPLICATION:
 
 GENERAL:
 - Write proper README file
+- Google URL should drop a pin and preferably give an accuracy
 
 
 INSTALLATION AND PACKAGING:

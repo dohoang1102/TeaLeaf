@@ -141,7 +141,7 @@ void fsevents_callback(ConstFSEventStreamRef streamRef,
 	
 	FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
 	FSEventStreamStart(stream);
-	NSLog(@"event stream initialized for path:%@", myPath);
+	//NSLog(@"event stream initialized for path:%@", myPath);
 }
 
 //

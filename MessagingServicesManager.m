@@ -118,7 +118,7 @@
 //
 -(void)messageSendSucceeded:(NSString *)requestIdentifier
 {
-	NSLog(@"Calling delegate");
+	//NSLog(@"Calling delegate");
 	[self.delegate messageSendSucceeded:requestIdentifier];
 }
 
