@@ -30,16 +30,12 @@
 	NSTextField		*serviceNameField;
 	
 	// controllers
-	//NSArrayController *arrayController;
 	PreferencesController *preferencesController;
-	
 	
 	// configuration data etc
 	NSArray				*serviceTypes;				// loaded from plist
 	NSMutableArray		*serviceConfigControllers;
 	NSMutableDictionary *preferencesDictionary; // store the prefs - bound to the equiv. in the prefs Controller.
-//	NSArray			*messagingConfig;	
-//	ManagingServiceConfigController *currentConfigController;  // just point to the currently selected in the array
 	
 	
 }
@@ -67,14 +63,11 @@
 @property (assign, nonatomic) IBOutlet NSTextField		*serviceNameField;
 @property (assign, nonatomic) IBOutlet NSTableView		*servicesTable;
 
-//@property (assign) IBOutlet NSArrayController *arrayController;
 @property (retain, nonatomic) PreferencesController *preferencesController;
 	
 @property (copy, nonatomic)		NSArray				*serviceTypes;
 @property (retain, nonatomic)	NSMutableArray		*serviceConfigControllers;  // cannot use copy on mutable object
 @property (retain, nonatomic)	NSMutableDictionary *preferencesDictionary;
-//@property (copy, nonatomic) NSArray		    *messagingConfig;	
-//@property (assign, nonatomic) ManagingServiceConfigController *currentConfigController;
 
 
 @end

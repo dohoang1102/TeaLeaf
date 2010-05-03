@@ -9,6 +9,7 @@
 #import "TeaLeafAppDelegate.h"
 #import "ServiceConfigController.h"
 #import	"PreferencesController.h"
+#import "ConfigurationDataManager.h"
 
 
 @interface TeaLeafAppDelegate(PrivateMethods)
@@ -37,13 +38,11 @@
 @synthesize daemonStartButton;
 @synthesize viewBox;
 @synthesize serviceConfigControllers;
-//@synthesize messagingConfig;
 @synthesize servicesTable;
 @synthesize removeButton;
 @synthesize newConfigViewSheet;
 @synthesize serviceTypePopup;
 @synthesize serviceNameField;
-//@synthesize arrayController;
 @synthesize preferencesController;
 @synthesize preferencesDictionary;
 @synthesize serviceTypes;
@@ -56,7 +55,7 @@
 	// do some initialization
 	if (self = [super init]) {
 		self.serviceConfigControllers = [NSMutableArray arrayWithCapacity:1];
-		//self.preferencesDictionary = [NSMutableDictionary dictionaryWithCapacity:1];
+		
 	}
 	
 	return self;
@@ -115,7 +114,6 @@
 	   didEndSelector:NULL
 		  contextInfo:NULL];
 	
-	
 }
 								
 // called when a button in the newConfigView is pressed
@@ -128,9 +126,9 @@
 							   config:nil]; 
 	} 
 	else if ([[whichButton title] isEqualToString:@"Cancel"]) {
-			NSLog(@"Cancel button pressed from sheet");
-	}
+	} 
 	else {
+	
 		NSLog (@"something odd happened");
 	}
 
@@ -149,7 +147,6 @@
 	
 	// get the currently selected item
 	NSUInteger index = [self.servicesTable selectedRow];
-	NSLog(@"tableviewselected index: %qu", index);
 	[self destroyServiceConfigView:index];
 	
 }
@@ -203,8 +200,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	//TODO: ERROR CHECK
 	NSInteger selectedItemIndex = [self.servicesTable selectedRow];
 	
-	NSLog(@"in note, selection index=%d", (int)selectedItemIndex);
-	
     if (selectedItemIndex == -1) {
 		[self displayViewController:nil];
 	}
@@ -235,7 +230,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 } 
 
 #pragma mark NSApplication delegate methods
-//TODO: this work, but when the last windo is close, it does not call the applicationWillTerminate
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)app
 {
 	return YES;
@@ -281,17 +275,15 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:index];
 	[self.servicesTable selectRowIndexes:indexSet byExtendingSelection:NO];
 	
-	//NSLog(@"create: array is now:%@", self.serviceConfigControllers);
 }
 
 // destroys an existing view controller, and reomves from the array
 -(void)destroyServiceConfigView:(NSUInteger)index
 {
 	// remove from the array
-	//NSLog(@"removing object at index %qu", index);
+	
 	[self.serviceConfigControllers removeObjectAtIndex:index];
 	
-	//NSLog(@"destroy: array is now:%@", self.serviceConfigControllers);
 	
 	[self.servicesTable reloadData];
 	
@@ -301,52 +293,20 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 // set the box's view this one
 -(void)displayViewController:(ManagingServiceConfigController*)viewController
 {
-	NSLog (@"displaying view controller:%@", viewController);
 	NSView *view = [viewController view];
 	
 	[self.viewBox setContentView:view];
-	
-	// set the currentclyViewController iVar	
-	//self.currentConfigController = viewController;
 
 }
 
 -(void)readConfiguration
 {
-	[self readPreferences];
-	[self readMessagingConfig];
-}
 
-//TODO: This needs reading from a plist in the app main bundle
--(NSMutableDictionary *)defaultPreferences
-{
-	
-	NSNumber *yes = [NSNumber numberWithBool:YES];
-	NSNumber *no = [NSNumber numberWithBool:NO];
-	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithObjectsAndKeys:no, @"isStolen", 
-																			   yes, @"logLocation", 
-																			   yes, @"takePictures", 
-																			   nil];
-	return d;						  
-	
-}
+	// get the preferences and stash in the prefs property
+	self.preferencesDictionary = [ConfigurationDataManager readPreferences];
 
--(void)readPreferences;
-{
-	//TODO: error checking
-	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithContentsOfURL:[self preferencesFileURL]];
-	if (d == nil) {
-		NSLog(@"no preferences file");
-		d = [self defaultPreferences];
-	}
-	self.preferencesDictionary = d;
-}
-
--(void)readMessagingConfig;
-{
-	// read configuration from the MessagingConfig.plist
-	NSArray *configArray = [NSArray arrayWithContentsOfURL:[self configurationFileURL]];
-	//NSLog(@"loaded array:%@", configArray);
+	// get the configuration array, and create the instances we need
+	NSArray *configArray = [ConfigurationDataManager readMessagingConfig];
 	
 	// loop this array. Instantiate viewControllers of the correct type,
 	NSString *serviceType;
@@ -360,100 +320,28 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 		[self createServiceConfigView:serviceName type:serviceType config:d];
 		
 	}
-}	
+	
+}
 
 -(void)writeConfiguration
 {
-	[self writePreferences];
-	[self writeMessagingConfig];
+	//TODO: better error checking - need sheet (the data manager methods return BOOLS)
+
+	// stash away the preferences
+	[ConfigurationDataManager writePreferences:self.preferencesDictionary];
+
+	 // stash away the messaging config
+	 NSMutableArray *configArray = [NSMutableArray arrayWithCapacity:[self.serviceConfigControllers count]];
+	 for (ServiceConfigController *c in self.serviceConfigControllers)
+	 {
+		 [configArray addObject:c.configDictionary];
+	 }
+	 
+	 [ConfigurationDataManager writeMessagingConfig:configArray];
 
 }
 
--(void)writePreferences
-{
-	NSURL *url = [self preferencesFileURL];
-	BOOL success = [self.preferencesDictionary writeToURL:url atomically:YES];
 
-	//TODO: better error checking - need sheet
-	if (success) {
-		NSLog(@"App preferences written to :%@", [url path]);
-	}
-	else {
-		NSLog(@"error writing preferencences file");
-	}
-}
 
--(void)writeMessagingConfig
-{
-	//NSURL *configFile = [self configurationFileURL];
-	
-	// construct an array of all the config dictionaries
-	NSMutableArray *configArray = [NSMutableArray arrayWithCapacity:[self.serviceConfigControllers count]];
-	for (ServiceConfigController *c in self.serviceConfigControllers)
-	{
-		[configArray addObject:c.configDictionary];
-	}
-	
-	//TODO: check return values and throwe error if NO 
-	
-	BOOL success = [configArray writeToURL:[self configurationFileURL] atomically:YES];
-	if (success) {
-		NSLog(@"App configuration written to :%@", [[self configurationFileURL] path]);
-	}
-	else {
-		NSLog(@"error writing config file");
-	}
-
-	
-}
-
-// returns a URL of the configuration directory
--(NSURL *)configurationDirectoryURL
-{
-	NSFileManager *fm = [NSFileManager defaultManager];	
-	
-	// Get application support directory
-	NSURL *URL =  [fm URLForDirectory:NSApplicationSupportDirectory 
-							 inDomain:NSLocalDomainMask
-					appropriateForURL:nil
-							   create:NO
-								error:NULL];
-	
-	
-	// Add the application specifion file component, and the file name
-	URL = [URL URLByAppendingPathComponent:@"TeaLeaf"];
-	NSString *path = [URL path];
-	
-	if (![fm fileExistsAtPath:path]) 
-	{
-		// Create it
-		NSError *error;
-		//TODO:  Errorcheck should throw an alert box
-		if (![fm createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error ]) 
-		{
-			NSLog(@"Failed to create app support directory:%@", error);
-			
-		}
-	}
-	
-	
-	return URL;
-}
-
-// returns a URL of the configuration file
--(NSURL *)configurationFileURL
-{
-	NSURL *URL = [[self configurationDirectoryURL] URLByAppendingPathComponent:@"MessagingConfig.plist"];
-	
-	return URL;
-}
-
-// returns a URL of the configuration file
--(NSURL *)preferencesFileURL
-{
-	NSURL *URL = [[self configurationDirectoryURL] URLByAppendingPathComponent:@"Prefs.plist"];
-	
-	return URL;
-}
 
 @end

@@ -34,6 +34,8 @@
 		7D722DB9118CDE9D00648F39 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4B3311664B830087B95A /* NSString+UUID.m */; };
 		7D722F8B118DBF0F00648F39 /* TestMessagingServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */; };
 		7D722F95118DC5B700648F39 /* MessagingServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */; };
+		7D7230D4118ED1E500648F39 /* ConfigurationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */; };
+		7D7230D5118ED1E500648F39 /* ConfigurationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */; };
 		7DA93C261163BE6900323BF3 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
 		7DA93C271163BEA800323BF3 /* tealeafdaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */; };
 		7DA93C70116479CB00323BF3 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C6F116479CB00323BF3 /* MainController.m */; };
@@ -108,6 +110,8 @@
 		7D673752118CCB92002CCD49 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7D722F89118DBF0F00648F39 /* TestMessagingServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMessagingServicesManager.h; sourceTree = "<group>"; };
 		7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessagingServicesManager.m; sourceTree = "<group>"; };
+		7D7230D2118ED1E500648F39 /* ConfigurationDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationDataManager.h; sourceTree = "<group>"; };
+		7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationDataManager.m; sourceTree = "<group>"; };
 		7DA93C041163BCF400323BF3 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
 		7DA93C051163BCF400323BF3 /* MessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingService.m; sourceTree = "<group>"; };
 		7DA93C071163BDCD00323BF3 /* FileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMessagingService.h; sourceTree = "<group>"; };
@@ -183,10 +187,7 @@
 		29B97314FDCFA39411CA2CEA /* TeaLeaf */ = {
 			isa = PBXGroup;
 			children = (
-				7D5D4B3211664B830087B95A /* NSString+UUID.h */,
-				7D5D4B3311664B830087B95A /* NSString+UUID.m */,
-				7D31D0FC10F9D70000DAFC6F /* Globals.h */,
-				7D31D0FD10F9D70000DAFC6F /* Globals.m */,
+				7D723128118EDB0B00648F39 /* Shared Source */,
 				7D31D0F310F9D6C900DAFC6F /* Tea Leaf Config App */,
 				7D31D1DA10F9FB2700DAFC6F /* Daemon */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -339,6 +340,19 @@
 			name = "Unit Tests";
 			sourceTree = "<group>";
 		};
+		7D723128118EDB0B00648F39 /* Shared Source */ = {
+			isa = PBXGroup;
+			children = (
+				7D7230D2118ED1E500648F39 /* ConfigurationDataManager.h */,
+				7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */,
+				7D5D4B3211664B830087B95A /* NSString+UUID.h */,
+				7D5D4B3311664B830087B95A /* NSString+UUID.m */,
+				7D31D0FC10F9D70000DAFC6F /* Globals.h */,
+				7D31D0FD10F9D70000DAFC6F /* Globals.m */,
+			);
+			name = "Shared Source";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -482,6 +496,7 @@
 				7D5D4AE61163D3E20087B95A /* MessagingServicesManager.m in Sources */,
 				7DA93C70116479CB00323BF3 /* MainController.m in Sources */,
 				7D5D4B3411664B830087B95A /* NSString+UUID.m in Sources */,
+				7D7230D5118ED1E500648F39 /* ConfigurationDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +511,7 @@
 				7D0E04C71153B153007C3CFE /* ServiceConfigController.m in Sources */,
 				7D3F68B11155263100008258 /* TwitterServiceConfigController.m in Sources */,
 				7D2B51A71156762C00A68F2E /* PreferencesController.m in Sources */,
+				7D7230D4118ED1E500648F39 /* ConfigurationDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

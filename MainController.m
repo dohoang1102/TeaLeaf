@@ -16,35 +16,13 @@
 {
 	if (self = [super init])
 	{
-		config = [[NSMutableArray alloc] initWithCapacity:2];
+		// read in configuration
 		
-		NSDictionary *d = [NSDictionary dictionaryWithObjectsAndKeys:
-						   @"/Users/rbt/Development/TeaLeafTesting/read-1", 
-						   directoryToReadFromKey, 
-						   @"/Users/rbt/Development/TeaLeafTesting/send-1",
-						   directoryToSendToKey,
-						   @"Service 1 (File)",
-						   serviceNameKey,
-						   @"File",
-						   serviceTypeKey,
-						   nil];
+		// instantiate MSM
 		
-		[config addObject:d];
+		// 
 		
 		
-		d = [NSDictionary dictionaryWithObjectsAndKeys:
-			 @"/Users/rbt/Development/TeaLeafTesting/read-2", 
-			 directoryToReadFromKey, 
-			 @"/Users/rbt/Development/TeaLeafTesting/send-2",
-			 directoryToSendToKey,
-			 @"Service 2 (File)",
-			 serviceNameKey,
-			 @"File",
-			 serviceTypeKey,
-			 nil];
-		
-		[config addObject:d];
-
 		
 		msm = [[MessagingServicesManager alloc] initWithDelegate:self configArray:config];
 		
@@ -85,10 +63,9 @@
 
 
 
-
+//
 // delegate methods:
-// delegate methods
-
+//
 -(void)messageSendSucceeded:(NSString *)requestIdentifier
 {
 //	NSLog (@"messageSendSucceeded");
