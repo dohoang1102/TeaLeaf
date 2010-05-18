@@ -23,6 +23,8 @@
 @property (readwrite, nonatomic, assign) BOOL isStolen;
 @property (readwrite, nonatomic, assign) BOOL logLocation;
 @property (readwrite, nonatomic, assign) BOOL takePictures;
+@property (readonly,  nonatomic) NSString *password;
+
 
 -(void)run;
 

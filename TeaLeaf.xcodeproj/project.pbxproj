@@ -88,7 +88,6 @@
 		7D3F68B01155263100008258 /* TwitterServiceConfigView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterServiceConfigView.xib; sourceTree = "<group>"; };
 		7D4AB4981150C77D00C14940 /* ServiceTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceTypes.plist; sourceTree = "<group>"; };
 		7D4AB4D9115106F300C14940 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/rbt/Development/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
-		7D5D4A8011627D8C0087B95A /* Class Diagram.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Class Diagram.pdf"; sourceTree = "<group>"; };
 		7D5D4AE41163D3E20087B95A /* MessagingServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingServicesManager.h; sourceTree = "<group>"; };
 		7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingServicesManager.m; sourceTree = "<group>"; };
 		7D5D4B3211664B830087B95A /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
@@ -190,7 +189,6 @@
 				7D31D1DA10F9FB2700DAFC6F /* Daemon */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				7D5D4A8011627D8C0087B95A /* Class Diagram.pdf */,
 				7DFECCD41142A9D000AA2151 /* TODO */,
 				7DFECCD51142AA0500AA2151 /* LICENSE */,
 				7DFECCD61142AADA00AA2151 /* README */,

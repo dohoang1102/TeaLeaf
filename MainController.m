@@ -17,13 +17,14 @@
 @interface MainController ()
 
 -(void)startStopStolenBehaviour;
+-(NSArray *)parseMessage:(NSString *)message;
 
 @end
 
 
 @implementation MainController
 
-@dynamic isStolen, logLocation, takePictures;
+@dynamic isStolen, logLocation, takePictures, password;
 
 
 #pragma mark constructors
@@ -102,8 +103,16 @@
 	}
 }
 
+-(NSString *)password
+{
+	return [state valueForKey:passwordKey];
+}
 
 
+
+//
+// Main Event Loop
+//
 -(void)run
 {
 	//TODO: need to respond gracefully to SIGTERM
@@ -129,13 +138,47 @@
 {
 	if (self.isStolen) {
 		locationManager = [[MyLocationManager alloc] initWithDelegate:self];
+		NSLog(@"starting stolen behaviour");
 	}
 	else {
 		[locationManager release];
 		locationManager = nil;
+		NSLog(@"stopping stolen behaviour");
 	}
 
 }
+//
+// takes a string and returens all the words in an array
+//
+-(NSArray *)parseMessage:(NSString *)message
+{
+	NSMutableArray *words = [NSMutableArray arrayWithCapacity:3];
+	NSCharacterSet *spaces = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+	NSString *word;
+	
+	// Get all words in the message in an array
+	
+	NSScanner *scanner = [NSScanner scannerWithString:message];
+	
+	[scanner setCharactersToBeSkipped:spaces];
+	
+	while (![scanner isAtEnd]) {
+		[scanner scanUpToCharactersFromSet:spaces intoString:&word];
+		NSLog(@"word: |%@|", word);
+		[words addObject:word];
+	}
+	
+	if ([words count])
+	{
+		return words;
+	}
+	else {
+		return nil;
+	}
+
+	
+}
+
 
 //
 // delegate methods:
@@ -152,14 +195,52 @@
 
 -(void)receivedMessage:(NSString *)message fromServiceInstanceNamed:(NSString *)serviceInstanceName
 {
-	NSLog(@"received message:%@ from service instance %@", message, serviceInstanceName);
 	
+	NSLog(@"received message:|%@| from service instance %@", message, serviceInstanceName);
 	
-	// parse message
+	// parse
+	NSMutableArray *words = [NSMutableArray arrayWithArray:[self parseMessage:message]];
 	
-	// is it a state change?
+	// do nothing if now words returned
+	if (!words)
+	{
+		return;
+	}
 	
+	// do we have a password?
 	
+	NSInteger passwordIndex = [words indexOfObject:[self password]];
+							   
+	if (passwordIndex == NSNotFound)
+	{
+		NSLog(@"Incorrect or missing password. No action taken");
+		return;
+	}
+							   
+	// we will only consider the word just after the password so we remove from array, and check the first object
+	[words removeObjectAtIndex:passwordIndex];
+	if ([words count] < 1)
+	{		
+		NSLog (@"no keyword supplied. No action taken %d", [words count]);
+		return;
+	}
+	
+	NSString *actionKeyword = [words objectAtIndex:0];
+	
+	// check stolen
+	if ([actionKeyword isEqualToString:stolenKeyword])
+	{
+		NSLog(@"we have just be told we are stolen");
+		self.isStolen = YES;
+	}
+//	else if (YES)
+//	{
+//	}
+	else
+	{
+		NSLog(@"no valid keyword supplied. No action taken");
+	}
+			
 }
 
 -(void)locationDidChange:(NSString *)location

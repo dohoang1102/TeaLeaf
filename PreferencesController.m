@@ -18,7 +18,7 @@
 	if (![super initWithWindowNibName:@"Preferences"])
 		return nil;
 	
-	self.preferencesDictionary = [NSMutableDictionary dictionaryWithCapacity:1];
+	self.preferencesDictionary = [NSMutableDictionary dictionaryWithCapacity:4];
 	return self;
 }
 
