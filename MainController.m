@@ -26,8 +26,8 @@
 
 @dynamic isStolen, logLocation, takePictures, password;
 
-
 #pragma mark constructors
+
 -(id)init
 {
 	if (self = [super init])
@@ -48,6 +48,7 @@
 	return self;
 }
 
+
 -(void)dealloc
 {
     [locationManager release];
@@ -61,6 +62,8 @@
 	
 	[super dealloc];
 }
+
+
 #pragma mark Accessors
 
 -(BOOL)isStolen
@@ -82,6 +85,7 @@
 	return [[state valueForKey:@"logLocation"] boolValue];
 }
 
+
 -(void)setLogLocation:(BOOL)value
 {
 	if (self.logLocation != value) {	
@@ -90,10 +94,12 @@
 	}
 }
 
+
 -(BOOL)takePictures
 {
 	return [[state valueForKey:@"takePictures"]boolValue];
 }
+
 
 -(void)setTakePictures:(BOOL)value
 {
@@ -103,11 +109,11 @@
 	}
 }
 
+
 -(NSString *)password
 {
 	return [state valueForKey:passwordKey];
 }
-
 
 
 //
@@ -128,8 +134,8 @@
 		
     }
     while (runLoopShouldRun);
-	
 }
+
 
 //
 // private methods
@@ -147,6 +153,8 @@
 	}
 
 }
+
+
 //
 // takes a string and returens all the words in an array
 //
@@ -172,26 +180,26 @@
 	{
 		return words;
 	}
-	else {
+	else
+	{
 		return nil;
-	}
-
-	
+	}	
 }
 
+#pragma mark Delegate methods
 
-//
-// delegate methods:
-//
 -(void)messageSendSucceeded:(NSString *)requestIdentifier
 {
-	NSLog (@"messageSendSucceeded, requestID:%@", requestIdentifier);
+	NSLog (@"messageSendSucceeded, Request ID:%@", requestIdentifier);
 	
 }
+
 
 -(void)messageSendFailed:(NSString *)requestIdentifier withError:(NSError *)error
 {
+	NSLog(@"Message send failed (Request ID:%@). Error:%@", requestIdentifier, error);
 }
+
 
 -(void)receivedMessage:(NSString *)message fromServiceInstanceNamed:(NSString *)serviceInstanceName
 {
@@ -208,7 +216,6 @@
 	}
 	
 	// do we have a password?
-	
 	NSInteger passwordIndex = [words indexOfObject:[self password]];
 							   
 	if (passwordIndex == NSNotFound)
@@ -218,10 +225,12 @@
 	}
 							   
 	// we will only consider the word just after the password so we remove from array, and check the first object
+
 	[words removeObjectAtIndex:passwordIndex];
+	
 	if ([words count] < 1)
 	{		
-		NSLog (@"no keyword supplied. No action taken %d", [words count]);
+		NSLog (@"No keyword supplied. No action taken %d", [words count]);
 		return;
 	}
 	
@@ -233,9 +242,6 @@
 		NSLog(@"we have just be told we are stolen");
 		self.isStolen = YES;
 	}
-//	else if (YES)
-//	{
-//	}
 	else
 	{
 		NSLog(@"no valid keyword supplied. No action taken");
@@ -243,15 +249,13 @@
 			
 }
 
+
 -(void)locationDidChange:(NSString *)location
 {
 	NSArray *requestIDs = [msm sendTextMessage:location];
 	
 	NSLog (@"Sending location change:%@, request ID's:%@", location, requestIDs);
-	
 }
-
-
 
 
 @end
