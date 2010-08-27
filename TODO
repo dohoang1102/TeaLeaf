@@ -1,23 +1,30 @@
-IMMEDIATE:
-- make a cup of tea
+ALL:
+- Use the colour calibration wizzaed as an example of how to code the setup wizard 
+
 - we will focus on twitter for 1.0. this means testing using the file, adding twitter, and then redoing the 
-  config app to shoow only twitter (can still dynamically load...
+  config app to show only twitter (can still dynamically load.
+- change the logging, ALog, Dlog etc (needs change to .pch file)
 
-
+DAEMON:
+- need serious look at strings which will end up in the app, which come from the Internet. Stack Overflow check...
+- Google URL should drop a pin and preferably give an accuracy.
 
 CONFIG APPLICATION:
+- Add Twitter config
 - Preferences panel needs a better name than 'window'
 - resolve issue with TableView focus ring bottom side near BWtoolkit widgets not visible (removed for now)
 - Complete error checking in App Delegate
 - Config file and application support directory needs to be root owned and perms 700
 - Write Start / Stop Daemon routines
+- The dameon indicator light should have some kind of kqueue thing going on, and received a signal if the state of the 
+daemon changes
 - Design and embed icon
 - Remove embedded key strings where there should be constants
-- convert user displayed strings to localised strings
+- Convert user displayed strings to localised strings
 - Customise about box
 - Undo functionality (can set the change flag manually)
 - Change font size for infomational labels where appropriate
-- Add formatter to various entry fields to lomit field sizes
+- Add formatter to various entry fields to limit field sizes
 - Configure menu items
 - menu item to save copies of current config (save / load menu items
 - help sheet on first launch
@@ -33,8 +40,7 @@ CONFIG APPLICATION:
 
 GENERAL:
 - Write proper README file
-- Google URL should drop a pin and preferably give an accuracy
-
+- Convert database to Core Data
 
 INSTALLATION AND PACKAGING:
 - Write PackageMaker
@@ -42,3 +48,14 @@ INSTALLATION AND PACKAGING:
 - Add sparkle
 - Write uninstallation processes in README
 
+THOUGHTS / IDEAS
+- Do we need a menu bar app? Sounds appropriate actually.
+- Wizard:
+	First time we fire up application check for database. If not there, then run the wizard.
+		1. A README file, explaining how this all works
+		2. First set up a Twitter account remind the user (that somebody needs to be following somebody else) as 
+			they will be sending Direct messages to this account.
+			Also, remind that they should NOT be using their own account.
+			Maybe this is too complicated. Maybe we just check for received stuff from the timeline.
+			Research how this all works..k'''''''''''/[;[
+		3. Test the twitter account
