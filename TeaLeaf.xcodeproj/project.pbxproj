@@ -26,14 +26,6 @@
 		7D5D4AEE1163D9560087B95A /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
 		7D5D4AEF1163D9630087B95A /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
 		7D5D4B3411664B830087B95A /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4B3311664B830087B95A /* NSString+UUID.m */; };
-		7D673753118CCB92002CCD49 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D673752118CCB92002CCD49 /* SenTestingKit.framework */; };
-		7D722D09118CCCBD00648F39 /* TestFileMessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D67374A118CC209002CCD49 /* TestFileMessagingService.m */; };
-		7D722D46118CCE9A00648F39 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D31D0FD10F9D70000DAFC6F /* Globals.m */; };
-		7D722D77118CD71E00648F39 /* FileMessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C081163BDCD00323BF3 /* FileMessagingService.m */; };
-		7D722D7A118CD72D00648F39 /* MessagingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA93C051163BCF400323BF3 /* MessagingService.m */; };
-		7D722DB9118CDE9D00648F39 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4B3311664B830087B95A /* NSString+UUID.m */; };
-		7D722F8B118DBF0F00648F39 /* TestMessagingServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */; };
-		7D722F95118DC5B700648F39 /* MessagingServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D4AE51163D3E20087B95A /* MessagingServicesManager.m */; };
 		7D7230D4118ED1E500648F39 /* ConfigurationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */; };
 		7D7230D5118ED1E500648F39 /* ConfigurationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */; };
 		7D723175118F00EF00648F39 /* MyLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D723174118F00EF00648F39 /* MyLocationManager.m */; };
@@ -94,13 +86,8 @@
 		7D5D4B3311664B830087B95A /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
 		7D67361F118C9A73002CCD49 /* MessagingServiceDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingServiceDelegateProtocol.h; sourceTree = "<group>"; };
 		7D673739118CBC9A002CCD49 /* TestFileMessagingService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestFileMessagingService-Info.plist"; sourceTree = "<group>"; };
-		7D673744118CC1E6002CCD49 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D673745118CC1E6002CCD49 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
-		7D673749118CC209002CCD49 /* TestFileMessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFileMessagingService.h; sourceTree = "<group>"; };
-		7D67374A118CC209002CCD49 /* TestFileMessagingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFileMessagingService.m; sourceTree = "<group>"; };
 		7D673752118CCB92002CCD49 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7D722F89118DBF0F00648F39 /* TestMessagingServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMessagingServicesManager.h; sourceTree = "<group>"; };
-		7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessagingServicesManager.m; sourceTree = "<group>"; };
 		7D7230D2118ED1E500648F39 /* ConfigurationDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationDataManager.h; sourceTree = "<group>"; };
 		7D7230D3118ED1E500648F39 /* ConfigurationDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationDataManager.m; sourceTree = "<group>"; };
 		7D723173118F00EF00648F39 /* MyLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationManager.h; sourceTree = "<group>"; };
@@ -114,7 +101,7 @@
 		7DA93C211163BE4200323BF3 /* uk.co.swandrift.tealeaf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = uk.co.swandrift.tealeaf; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA93C6E116479CB00323BF3 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		7DA93C6F116479CB00323BF3 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
-		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = TODO; sourceTree = "<group>"; };
+		7DFECCD41142A9D000AA2151 /* TODO */ = {isa = PBXFileReference; explicitFileType = text; path = TODO; sourceTree = "<group>"; };
 		7DFECCD51142AA0500AA2151 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7DFECCD61142AADA00AA2151 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TeaLeaf-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TeaLeaf-Info.plist"; sourceTree = "<group>"; };
@@ -122,14 +109,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D673741118CC1E6002CCD49 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D673753118CCB92002CCD49 /* SenTestingKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DA93C1F1163BE4200323BF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,7 +155,6 @@
 			children = (
 				8D1107320486CEB800E47090 /* TeaLeaf.app */,
 				7DA93C211163BE4200323BF3 /* uk.co.swandrift.tealeaf */,
-				7D673744118CC1E6002CCD49 /* UnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,7 +267,6 @@
 				7D723173118F00EF00648F39 /* MyLocationManager.h */,
 				7D723174118F00EF00648F39 /* MyLocationManager.m */,
 				7D72317F118F02C100648F39 /* MyLocationManagerDelegateProtocol.h */,
-				7D673722118CBB9E002CCD49 /* Unit Tests */,
 				7D31D23010F9FD1C00DAFC6F /* tealeafdaemon.m */,
 				7DA93C6E116479CB00323BF3 /* MainController.h */,
 				7DA93C6F116479CB00323BF3 /* MainController.m */,
@@ -328,17 +305,6 @@
 			name = Twitter;
 			sourceTree = "<group>";
 		};
-		7D673722118CBB9E002CCD49 /* Unit Tests */ = {
-			isa = PBXGroup;
-			children = (
-				7D673749118CC209002CCD49 /* TestFileMessagingService.h */,
-				7D67374A118CC209002CCD49 /* TestFileMessagingService.m */,
-				7D722F89118DBF0F00648F39 /* TestMessagingServicesManager.h */,
-				7D722F8A118DBF0F00648F39 /* TestMessagingServicesManager.m */,
-			);
-			name = "Unit Tests";
-			sourceTree = "<group>";
-		};
 		7D723128118EDB0B00648F39 /* Shared Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,24 +321,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D673743118CC1E6002CCD49 /* UnitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7D673748118CC1E7002CCD49 /* Build configuration list for PBXNativeTarget "UnitTests" */;
-			buildPhases = (
-				7D67373F118CC1E6002CCD49 /* Resources */,
-				7D673740118CC1E6002CCD49 /* Sources */,
-				7D673741118CC1E6002CCD49 /* Frameworks */,
-				7D673742118CC1E6002CCD49 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UnitTests;
-			productName = UnitTests;
-			productReference = 7D673744118CC1E6002CCD49 /* UnitTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 		7DA93C201163BE4200323BF3 /* uk.co.swandrift.tealeaf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DA93C251163BE6300323BF3 /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */;
@@ -422,19 +370,11 @@
 			targets = (
 				8D1107260486CEB800E47090 /* TeaLeaf */,
 				7DA93C201163BE4200323BF3 /* uk.co.swandrift.tealeaf */,
-				7D673743118CC1E6002CCD49 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D67373F118CC1E6002CCD49 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,37 +392,7 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		7D673742118CC1E6002CCD49 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		7D673740118CC1E6002CCD49 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D722D46118CCE9A00648F39 /* Globals.m in Sources */,
-				7D722D7A118CD72D00648F39 /* MessagingService.m in Sources */,
-				7D722F95118DC5B700648F39 /* MessagingServicesManager.m in Sources */,
-				7D722D77118CD71E00648F39 /* FileMessagingService.m in Sources */,
-				7D722D09118CCCBD00648F39 /* TestFileMessagingService.m in Sources */,
-				7D722DB9118CDE9D00648F39 /* NSString+UUID.m in Sources */,
-				7D722F8B118DBF0F00648F39 /* TestMessagingServicesManager.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DA93C1E1163BE4200323BF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,60 +438,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7D673746118CC1E7002CCD49 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "UnitTests-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Cocoa,
-					"-framework",
-					SenTestingKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = UnitTests;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		7D673747118CC1E7002CCD49 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "UnitTests-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Cocoa,
-					"-framework",
-					SenTestingKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = UnitTests;
-				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		7DA93C231163BE4500323BF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -702,15 +558,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D673748118CC1E7002CCD49 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7D673746118CC1E7002CCD49 /* Debug */,
-				7D673747118CC1E7002CCD49 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7DA93C251163BE6300323BF3 /* Build configuration list for PBXNativeTarget "uk.co.swandrift.tealeaf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
