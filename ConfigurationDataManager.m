@@ -118,7 +118,7 @@
 	
 	//TODO: better error checking - need sheet
 	if (success) {
-		ALog(@"App preferences written to :%@", [url path]);
+		DLog(@"App preferences written to :%@", [url path]);
 	}
 	else {
 		ALog(@"error writing preferencences file");
@@ -133,7 +133,7 @@
 	
 	BOOL success = [configArray writeToURL:[self configurationFileURL] atomically:YES];
 	if (success) {
-		ALog(@"App configuration written to :%@", [[self configurationFileURL] path]);
+		DLog(@"App configuration written to :%@", [[self configurationFileURL] path]);
 	}
 	else {
 		ALog(@"error writing config file");
