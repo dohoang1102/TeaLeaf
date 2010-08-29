@@ -17,12 +17,10 @@ int main (int argc, const char * argv[])
 	// Start a Controller
 	MainController *controller = [[MainController alloc] init];
 	
-	[controller run];
-	
+	[controller run];	
 	[controller dealloc];
 	
-	NSLog(@"exiting");
-	
+	DLog(@"exiting");	
 	
 	[pool release];
 	

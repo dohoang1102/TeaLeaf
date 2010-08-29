@@ -1,13 +1,15 @@
 ALL:
 - Use the colour calibration wizzaed as an example of how to code the setup wizard 
-
 - we will focus on twitter for 1.0. this means testing using the file, adding twitter, and then redoing the 
   config app to show only twitter (can still dynamically load.
-- change the logging, ALog, Dlog etc (needs change to .pch file)
 
 DAEMON:
 - need serious look at strings which will end up in the app, which come from the Internet. Stack Overflow check...
 - Google URL should drop a pin and preferably give an accuracy.
+- Security, authorization. This is a big area. Check apple docs.
+- Core Location - is it Daemon safe??
+
+
 
 CONFIG APPLICATION:
 - Add Twitter config

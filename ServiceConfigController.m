@@ -30,7 +30,7 @@
 
 -(id)init
 {
-	NSLog(@"init needs to be overidden in a subclass. return nil");
+	ALog(@"init needs to be overidden in a subclass. return nil");
 	return nil;
 }
 
@@ -42,7 +42,7 @@
 
 -(void)setServiceName:(NSString *)aServiceName
 {
-	NSLog(@"setting service name to %@", aServiceName);	
+	DLog(@"setting service name to %@", aServiceName);	
 	if ([aServiceName isEqual:nil]) {
 		[self.configDictionary setNilValueForKey:serviceNameKey];
 	}
@@ -59,7 +59,7 @@
 	
 -(void)setServiceType:(NSString *)aServiceType
 {
-	NSLog(@"setting service type to %@", aServiceType);	
+	DLog(@"setting service type to %@", aServiceType);	
 	if ([aServiceType isEqual:nil]) {
 		[self.configDictionary setNilValueForKey:serviceTypeKey];
 	}
@@ -115,7 +115,7 @@
 			break;
 			
 		default:
-			NSLog(@"unkown control - am expecting a choose button");
+			ALog(@"unkown control - am expecting a choose button");
 			break;
 		}
 	}

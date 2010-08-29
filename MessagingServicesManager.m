@@ -99,7 +99,7 @@
 			return requestID;
 		}
 	}
-	NSLog(@"service name:%@ not found", serviceName);
+	ALog(@"service name:%@ not found", serviceName);
 	return nil;
 }
 

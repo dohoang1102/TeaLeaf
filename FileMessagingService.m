@@ -162,7 +162,7 @@ void fsevents_callback(ConstFSEventStreamRef streamRef,
 															  encoding:NSASCIIStringEncoding 
 																 error:&error];
 			if (error) {
-				NSLog(@"error reading file:%@",error);
+				DLog(@"error reading file:%@",error);
 				return;
 			}
 			[self.delegate receivedMessage:messageText fromServiceInstanceNamed:self.serviceName];
@@ -174,7 +174,7 @@ void fsevents_callback(ConstFSEventStreamRef streamRef,
 		[fm removeItemAtPath:fullPath error:&error];
 		
 		if (error)
-			NSLog(@"error deleting file:%@",error);
+			DLog(@"error deleting file:%@",error);
 		}
 					
 }

@@ -129,7 +129,7 @@
 	} 
 	else {
 	
-		NSLog (@"something odd happened");
+		ALog (@"something odd happened");
 	}
 
 	//TODO: validate name against existing names 

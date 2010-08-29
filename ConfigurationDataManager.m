@@ -41,7 +41,7 @@
 		//TODO:  Errorcheck should throw an alert box
 		if (![fm createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error ]) 
 		{
-			NSLog(@"Failed to create app support directory:%@", error);
+			ALog(@"Failed to create app support directory:%@", error);
 			
 		}
 	}
@@ -92,7 +92,7 @@
 	//TODO: error checking
 	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithContentsOfURL:[self preferencesFileURL]];
 	if (d == nil) {
-		NSLog(@"no preferences file");
+		DLog(@"no preferences file");
 		d = [self defaultPreferences];
 	}
 	return d;
@@ -118,10 +118,10 @@
 	
 	//TODO: better error checking - need sheet
 	if (success) {
-		NSLog(@"App preferences written to :%@", [url path]);
+		ALog(@"App preferences written to :%@", [url path]);
 	}
 	else {
-		NSLog(@"error writing preferencences file");
+		ALog(@"error writing preferencences file");
 	}
 	return success;
 }
@@ -133,10 +133,10 @@
 	
 	BOOL success = [configArray writeToURL:[self configurationFileURL] atomically:YES];
 	if (success) {
-		NSLog(@"App configuration written to :%@", [[self configurationFileURL] path]);
+		ALog(@"App configuration written to :%@", [[self configurationFileURL] path]);
 	}
 	else {
-		NSLog(@"error writing config file");
+		ALog(@"error writing config file");
 	}
 	
 	return success;

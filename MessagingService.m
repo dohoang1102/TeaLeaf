@@ -48,13 +48,13 @@
 
 -(NSString *)sendTextMessage:(NSString *)textMessage
 {
-	NSLog(@"Error - sendTextMessage needs to be overidden in a subclass");
+	ALog(@"Error - sendTextMessage needs to be overidden in a subclass");
 	return nil;
 }
 
 -(NSString *)sendAttachment:(NSData *)attachment; 
 {
-	NSLog(@"Error - sendAttachment needs to be overidden in a subclass");
+	ALog(@"Error - sendAttachment needs to be overidden in a subclass");
 	return nil;
 }
 
